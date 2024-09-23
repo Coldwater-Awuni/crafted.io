@@ -213,12 +213,9 @@
 
 /* Quote Section */
 .quote-section {
-    background: rgb(154,199,82);
-    background: -moz-radial-gradient(circle, rgba(154,199,82,1) 0%, rgba(119,132,123,1) 89%, rgba(66,66,66,1) 100%);
-    background: -webkit-radial-gradient(circle, rgba(154,199,82,1) 0%, rgba(119,132,123,1) 89%, rgba(66,66,66,1) 100%);
-    background: radial-gradient(circle, rgba(154,199,82,1) 0%, rgba(119,132,123,1) 89%, rgba(66,66,66,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9ac752",endColorstr="#424242",GradientType=1);
-    min-height: 40vh;
+    margin-top: 50px;
+    background-color: rgb(154,199,82);
+     min-height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
