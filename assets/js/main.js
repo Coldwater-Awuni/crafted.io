@@ -8,10 +8,63 @@ function toggleNav() {
         sidenav.style.right = "0px";
     }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const fancyItems = document.querySelectorAll(".fancy-skew__list li");
+
+  fancyItems.forEach(item => {
+      const linkWrapper = item.querySelector(".link-wrapper");
+      const subtitle = item.querySelector(".fancy-skew__subtitle");
+
+      // Hover on
+      item.addEventListener("mouseenter", () => {
+          item.classList.add("active");
+          subtitle.style.opacity = "1"; // Show subtitle
+      });
+
+      // Hover off
+      item.addEventListener("mouseleave", () => {
+          item.classList.remove("active");
+          subtitle.style.opacity = "0"; // Hide subtitle
+      });
+  });
+
+  // Scroll effect for perspective origin
+  window.addEventListener("scroll", throttle(updatePerspective, 100));
+
+  function updatePerspective() {
+      const fancySkew = document.querySelector(".fancy-skew");
+      if (fancySkew) {
+          const boundingBox = fancySkew.getBoundingClientRect();
+          const vanishingPoint = window.innerHeight / 2;
+          const center = boundingBox.top + boundingBox.height / 2;
+          const yPos = Math.round((center - vanishingPoint) / 4);
+
+          fancyItems.forEach(item => {
+              item.style.perspectiveOrigin = `50% ${-yPos}px`;
+          });
+      }
+  }
+
+  // Throttle function to limit scroll events
+  function throttle(fn, time) {
+      let inThrottle;
+      return function () {
+          if (!inThrottle) {
+              fn.apply(this, arguments);
+              inThrottle = true;
+              setTimeout(() => {
+                  inThrottle = false;
+              }, time);
+          }
+      };
+  }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     const swiper = new Swiper('.swiper', {
         loop: true,
-        speed: 500,
+        speed: 5000,
         pagination: {
             el: '.swiper-pagination',
             clickable: true,

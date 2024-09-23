@@ -14,13 +14,13 @@ p{
 
 /* Home Carousel Background */
 .home-top_carousel-background {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     height: 100vh;
     width: 100%;
     overflow: hidden;
-    z-index: -1;
+    /* z-index: -1; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,7 +52,7 @@ p{
 
 .home-top-carousel-text li {
     list-style-type: none;
-    font-size: 2rem;
+    font-size: 60px ;
     margin-bottom: 1rem;
     opacity: 0;
     transition: opacity 1s ease-in-out;
@@ -69,7 +69,7 @@ p{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-}
+}   
 
 .swiper-pagination-bullet {
     width: 12px;
@@ -161,7 +161,7 @@ main {
 /* Responsive Adjustments */
 @media (max-width: 1024px) {
     .home-top-carousel-text li {
-        font-size: 1.8rem;
+        font-size: 70px;
     }
     
     .quote-section {
@@ -175,7 +175,7 @@ main {
 
 @media (max-width: 768px) {
     .home-top-carousel-text li {
-        font-size: 1.6rem;
+        font-size: 6rem;
     }
 
     .quote-section {
@@ -185,7 +185,7 @@ main {
 
 @media (max-width: 480px) {
     .home-top-carousel-text li {
-        font-size: 1.2rem;
+        font-size: 6rem;
     }
 
     .quote-section {
@@ -200,7 +200,7 @@ main {
         display: none;
     }
 }
-
+/* 
    .header {
             padding: 10px;
             background-color:transparent;
@@ -210,10 +210,10 @@ main {
             align-items: center;
         }
 
-        .logo {
+         .logo {
             font-size: 50px;
             font-weight: bold;
-        }
+        } 
 
         .hamburger {
             font-size: 30px;
@@ -273,7 +273,7 @@ main {
             top: 20px;
             right: 45px;
             font-size: 60px;
-        }
+        } */
 
   
   h1 {
@@ -289,11 +289,6 @@ main {
   }
   
   
-  /* Container */
-  .our-difference {
-    padding: 50px;
-    background-color: #f8f8f8;
-  }
   
 
   /* #80534d 
@@ -303,210 +298,132 @@ main {
   */
 
 /* Skew Container */
-.our-difference-content {
+/* .our-difference-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 20px;
   }
-  
+   */
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  text-align: center;
+  margin: 40px 0;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Container */
+.our-difference {
+  position: relative;
+  /* padding: 50px; */
+  background-color: #f8f8f8;
+}
+.our-difference-title title{
+
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  background-color: #000000;
+  padding-left: 10px;
+}
+.our-difference-title p
+{
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  color: #f5f4f3;
+
+}
+
+
+
+
+
+/* Skew Container */
+.our-difference-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+/* Skew Item */
+.fancy-skew-item {
+  position: relative;
+  width: 45%;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Title */
+.fancy-skew-item-title h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  transition: transform 0.5s ease, color 0.3s ease;
+}
+
+/* Rotate even and odd items differently */
+.fancy-skew-item:nth-child(odd) .fancy-skew-item-title h2 {
+  transform: rotate(10deg);
+}
+
+.fancy-skew-item:nth-child(even) .fancy-skew-item-title h2 {
+  transform: rotate(-10deg);
+}
+
+/* Hover effect: Rotate back to normal */
+.fancy-skew-item-title h2:hover {
+  transform: rotate(0deg);
+  color: #0077cc;
+}
+
+/* Sub-content: Initially hidden */
+.fancy-skew-item-title-sub-content {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, height 0.5s ease;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  color: #666;
+}
+
+/* Responsive Layout */
+@media (max-width: 1024px) {
   .fancy-skew-item {
-    position: relative;
-    width: 30%;
-    min-width: 280px;
-    background-color: #fff;
-    padding: 20px;
-    transform: skew(-10deg);
-    overflow: hidden;
-    transition: transform 0.5s ease, max-height 0.5s ease;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    max-height: 100px; /* Adjust based on the height of the title */
-    cursor: pointer;
+    width: 45%;
   }
-  
-  .fancy-skew-item:hover {
-    transform: skew(0) scale(1.05);
-    max-height: 300px; /* Adjust based on the full content */
+
+  h1 {
+    font-size: 40px;
   }
-  
-  /* Title */
-  .fancy-skew-item-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-    transition: color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .fancy-skew-item {
+    width: 100%;
   }
-  
-  .fancy-skew-item:hover .fancy-skew-item-title {
-    color: #80534d ;
+
+  h1 {
+    font-size: 35px;
   }
-  
-  /* Sub-content */
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  .fancy-skew-item-title h2 {
+    font-size: 24px;
+  }
+
   .fancy-skew-item-title-sub-content {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    font-family: 'Lato', sans-serif;
-    font-size: 18px;
-    color: #666;
-    max-height: 0;
-    overflow: hidden;
+    font-size: 16px;
   }
-  
-  .fancy-skew-item:hover .fancy-skew-item-title-sub-content {
-    opacity: 1;
-    transform: translateY(0);
-    max-height: 200px; /* Adjust to ensure the content fits */
-  }
-  
-  /* Responsive Layout */
-  @media (max-width: 1024px) {
-    .fancy-skew-item {
-      width: 45%;
-    }
-  
-    h1 {
-      font-size: 40px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .fancy-skew-item {
-      width: 100%;
-    }
-  
-    h1 {
-      font-size: 35px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    h1 {
-      font-size: 28px;
-    }
-  
-    .fancy-skew-item-title {
-      font-size: 24px;
-    }
-  
-    .fancy-skew-item-title-sub-content {
-      font-size: 16px;
-    }
-  }
-/* Beyond Green Revolution Section */
-.beyond-green-revolution {
-    position: relative;
-    width: 70vw;
-    height: 70vh;
-    margin: 0 auto; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .beyond-green-revolution h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 50px;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  .green-rev {
-    color: #43a343;
-  }
-  
-  /* Video container for the video and text */
-  .video-container {
-    position: relative;
-    width: 100%;
-    height: 90%;
-  }
-  
-  .bg-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-  }
-  
-  .video-container .content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    color: #fff;
-    padding: 20px;
-  }
-  
-  .video-container p {
-    font-family: 'Lato', sans-serif;
-    font-size: 18px;
-    margin-bottom: 30px;
-    line-height: 1.6;
-  }
-  
-  .cta-button {
-    font-family: 'Lato', sans-serif;
-    font-size: 18px;
-    padding: 12px 30px;
-    background-color: #43a343;
-    color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .cta-button:hover {
-    background-color: #bfb0ab;
-  }
-  
-  /* Dark overlay for the video to enhance text visibility */
-  .video-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
-    z-index: 1;
-  }
-  
-  /* Responsive design */
-  @media (max-width: 1024px) {
-    .beyond-green-revolution h2 {
-      font-size: 40px;
-    }
-    .video-container p {
-      font-size: 16px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .beyond-green-revolution h2 {
-      font-size: 35px;
-    }
-    .video-container p {
-      font-size: 14px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .beyond-green-revolution h2 {
-      font-size: 28px;
-    }
-    .video-container p {
-      font-size: 13px;
-    }
-  
-    .cta-button {
-      font-size: 16px;
-    }
-  }
-  
+}
