@@ -584,6 +584,7 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    background-position-x: right;
 }
 .win-quote-section::before {
     content: '';
