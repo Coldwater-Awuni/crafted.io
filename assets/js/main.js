@@ -113,3 +113,29 @@ document.addEventListener("DOMContentLoaded", function () {
 //     window.addEventListener('load', resizeBackgroundImages);
 //     window.addEventListener('resize', resizeBackgroundImages);
 // });
+
+const homeSwiper = document.querySelectorAll('.mycarousel')
+
+const swiperParams = {
+slidesPerView: 1,
+loop: true,
+speed: 4000,
+navigation:"true",
+pagination:true,
+autoplay:false,
+on: {
+  init() {
+    // ...
+  },
+},
+};
+
+
+
+
+
+homeSwiper.forEach(element => {
+  Object.assign(element, swiperParams);
+  element.initialize();
+  // element.swiper.autoplay = false;
+});

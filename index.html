@@ -70,44 +70,46 @@
 
         <div class="main-content">
             <div class="slider-container">
-                <div class="slider">
-                    <div class="slide">
+
+                <swiper-container class="mycarousel" loop="true"   >                         						
+                    <swiper-slide>
                         <img src="assets/img/home-swipper/green_1.jpg" alt="Slide 1">
                         <div class="slide-overlay">
                             <div class="slide-title">More than Buildings—Crafting Spaces that Elevate Living</div>
                             <div class="slide-description">That's why we evolved into Craft'd Habitat</div>
                         </div>
-                    </div>
-                    <div class="slide">
+                    </swiper-slide>
+                    <swiper-slide>
                         <img src="assets/img/home-swipper/home_1.png" alt="Slide 2">
                         <div class="slide-overlay">
                             <div class="slide-title">We Create Spaces that Nurture Holistic Wellbeing</div>
                             <div class="slide-description">Where every design prioritizes human experience and health</div>
                         </div>
-                    </div>
-                    <div class="slide">
+                    </swiper-slide>
+                    
+                    <swiper-slide>
                         <img src="assets/img/home-swipper/office_1.png" alt="Slide 3">
                         <div class="slide-overlay">
                             <div class="slide-title">For High-Level Executives and Decision Makers</div>
-                            <div class="slide-description">Sanctuaries for idea creation and high-level decision making</div>
+                            <!-- <div class="slide-description"></div> -->
                         </div>
-                    </div>
-                    <!-- <div class="slide">
-                        <img src="assets/img/home_background_img (4).jpg" alt="Slide 4">
+                    </swiper-slide>
+                    <swiper-slide>
+                        <img src="assets/img/home-swipper/green_1.jpg" alt="Slide 1">
                         <div class="slide-overlay">
-                            <div class="slide-title">Award-Winning Design</div>
-                            <div class="slide-description">Recognized for our innovative and human-centric approach</div>
+                            <div class="slide-title">Sanctuaries for idea creation and high-level decision making</div>
+                            <!-- <div class="slide-description">That's why we evolved into Craft'd Habitat</div> -->
                         </div>
-                    </div> -->
-                    <div class="slide">
+                    </swiper-slide>
+                    <swiper-slide>
                         <img src="assets/img/home-swipper/space_1.jpg" alt="Slide 5">
                         <div class="slide-overlay">
                             <div class="slide-title">Elevating Spaces, Enhancing Lives</div>
                             <div class="slide-description">Experience the Craft'd Habitat difference</div>
                         </div>
-                    </div>
-                </div>
-                <div class="slider-controls"></div>
+                    </swiper-slide>
+               
+                  </swiper-container>
             </div>
 
             <section class="quote-section">
@@ -164,6 +166,20 @@
                                 <div class="grid-img" style="background-image: url('assets/img/service/service\ \(2\).jpg');">
                                 </div>
                                 <div class="grid-txt">
+                                    <h3>Corporate Well-being & Creativity Office Transformation </h3>
+                                    <p>Entire estates or luxury retreats designed for reflection,
+                                        creativity, and rejuvenation</p>
+                                </div>
+                                <div class="grid-btn">
+                                    <button type="button">Read more</button>
+                                </div>
+                            </div>
+                           
+                       
+                            <div class="service-grid-item">
+                                <div class="grid-img" style="background-image: url('assets/img/service/service\ \(2\).jpg');">
+                                </div>
+                                <div class="grid-txt">
                                     <h3>Executive Retreat & Diplomatic Sanctuaries</h3>
                                     <p>Entire estates or luxury retreats designed for 
                                         reflection, creativity, and rejuvenation</p>
@@ -195,7 +211,8 @@
                                         <div class="link-wrapper">
                                             <a href="#">Holistic Wellbeing</a>
                                             <div class="fancy-skew__subtitle">
-                                                <p>Design spaces that nourish the soul and prioritize physical and emotional wellbeing, fostering environments that support personal growth, creativity, and overall happiness.</p>
+                                                <p>Designs that prioritize physical, emotional, and spiritual health
+                                                </p>
                                             </div>
                                         </div>
                                     </li>
@@ -359,7 +376,27 @@
                          
                         </div>
                     </section>
+                    <section class="swiper-section">
+                        <swiper-container class="mycarousel" loop="true" speed="300"     >
+			
+                         						
+                            <swiper-slide>
+                                <img class="slide-img" src="assets/img/home-swipper/home_1.png" alt="Slide 1">
+                            </swiper-slide>
+                            <swiper-slide>
+                                <img class="slide-img" src="assets/img/home-swipper/office_1.png" alt="Slide 1">
+                            </swiper-slide>
+                            
+                            <swiper-slide>
+                                <img class="slide-img" src="assets/img/home-swipper/home_2.png" alt="Slide 1">
+                            </swiper-slide>
+                            <swiper-slide>
+                                <img class="slide-img" src="assets/img/home-swipper/green_1.jpg" alt="Slide 1">
+                            </swiper-slide>
+                       
+                          </swiper-container>
 
+                    </section>
                 <section class="contact-section">
                 <div class="contact-container">
                     <h1>‘Ready to elevate your space</h1>
@@ -407,6 +444,9 @@
 
         </div>
     </div>
+    <script type="text/javascript" src="assets/lib/_jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/vendors/swiper/swiper.jquery.js"></script>
+    <script type="text/javascript" src="assets/lib/swiper-element-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
