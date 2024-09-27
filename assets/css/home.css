@@ -29,6 +29,7 @@
     body, html {
         height: 100%;
         font-family:  'Montserrat', 'Lato';
+        /* background-color: var(--primary-color); */
     }
     h1,h2{
         font-family:'Montserrat' ;
@@ -66,6 +67,7 @@
         list-style-type: none;
         padding: 0;
         margin: 0;
+        text-align: center;
     }
     .menu-item {
         position: relative;
@@ -77,6 +79,7 @@
         padding: 10px 20px;
         text-decoration: none;
         color: #333;
+        text-transform: uppercase;
         transition: background-color 0.3s;
     }
     .menu-item > a {
@@ -430,8 +433,13 @@ swiper-container {
     /* max-width: 1200px; */
     width: 100%;
     /* height: 80vh; */
-    background-color: #fffafa;
+    background-color: darkgray;
   
+}
+.service-carousel{
+   width: 95%;
+    overflow: hidden;
+    margin: 5px;
 }
 .service-container{
     margin: 0 auto;
@@ -445,10 +453,23 @@ swiper-container {
     flex-wrap: wrap;
     
 }
+.our-service-carousel{
+    padding-top: 5px;
+}
+.service-grid-item-c{
+    background-color: whitesmoke;
+    /* height: ; */
+    /* margin: 0px auto; */
+}
+.service-grid-item-c:hover{
+    cursor: pointer;
+    scale: 101%;
+}
 .service-grid-item {
-    width: calc(40.33% - 20px);
+    width: calc(33.33% - 20px);
     /* margin-bottom: 30px; */
-    margin: 20px;
+    margin: 0px auto;
+    /* margin: 20px; */
     background-color: whitesmoke;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     
@@ -458,15 +479,12 @@ swiper-container {
     scale: 101%;
 }
 .grid-img {
-    height: 400px;
+    height: 300px;
     background-size: cover;
     background-position: center;
     transition: all o.5 ease-in-out;
 }
-/* .grid-img:hover{
- background-size: 110%;
- cursor: pointer;
-} */
+
 .grid-txt {
     padding: 15px;
     text-align: center;
@@ -479,6 +497,9 @@ swiper-container {
     color: #666;
 }
 .grid-btn {
+    margin: auto 10px;
+    
+    bottom: 3px;
     text-align: center;
     padding-bottom: 15px;
 }
@@ -505,14 +526,14 @@ swiper-container {
         }
     }
 
- /* 0591866046 */
+
 
 @media (max-width: 768px) {
     .service-grid-item {
         width: 90%;
     }
 }
-/* Container */
+/* Our Difference */
 .our-difference {
   position: relative;
   /* padding: 50px; */
@@ -665,7 +686,7 @@ swiper-container {
             gap: 1rem;
             padding: 1rem;
         }
-        .project-item {
+.project-item {
             position: relative;
             overflow: hidden;
             border-radius: 8px;
@@ -722,7 +743,7 @@ swiper-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 1rem;
-    text-align: center;
+   
 }
 
 .clients-review {
@@ -730,6 +751,7 @@ swiper-container {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 2rem;
+    text-align: center;
 }
 
 .section__card {
@@ -776,11 +798,20 @@ swiper-container {
 }
 
 .section__card p {
+
     margin-bottom: 2rem;
     color: var(--text-light);
     transition: color 0.3s ease-in-out;
-}
 
+}
+.section__card img {
+    margin-bottom: 1rem;
+    max-width: 100px;
+    border-radius: 100%;
+    border: 2px solid var(--primary-color);
+    transition: 0.3s;
+  }
+  
 .section__card h5 {
     font-size: 1.25rem;
     font-weight: 600;
@@ -799,6 +830,29 @@ swiper-container {
 .section__card:hover p {
     color: var(--text-dark);
 }
+/* Styling for the stars */
+.stars {
+    margin: 1rem 0;
+    color: #FFD700; /* Golden color */
+    font-size: 1.25rem;
+}
+
+.stars .fa-star {
+    margin-right: 0.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .stars {
+        font-size: 1.1rem; /* Slightly smaller stars for small screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .stars {
+        font-size: 1rem; /* Further reduce star size for very small screens */
+    }
+}
 
 /* Responsive Design */
 @media (max-width: 1024px) {
@@ -813,13 +867,14 @@ swiper-container {
 }
 
 @media (max-width: 768px) {
+
     .clients-review {
         grid-template-columns: 1fr;
     }
 
     .section__card {
         padding: 3rem 1rem 1.5rem;
-        width: 80%;  /* Reduce box width on smaller screens */
+        width: 70%;  /* Reduce box width on smaller screens */
         margin: 0 auto;
     }
 
@@ -986,7 +1041,7 @@ button:hover {
     margin-bottom: 1rem;
 }
 
-.contact-number, .copyright {
+.contact-number, .footer-container .copyright {
     color: #ffffff;
     font-size: 0.9rem;
 }

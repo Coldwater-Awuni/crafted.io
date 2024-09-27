@@ -114,15 +114,15 @@ document.addEventListener("DOMContentLoaded", function () {
 //     window.addEventListener('resize', resizeBackgroundImages);
 // });
 
-const homeSwiper = document.querySelectorAll('.mycarousel')
+const homeSwiper = document.querySelectorAll('.carousel')
 
 const swiperParams = {
-slidesPerView: 1,
+// slidesPerView: 1,
 loop: true,
-speed: 4000,
-navigation:"true",
-pagination:true,
-autoplay:false,
+// speed: 4000,
+navigation:"false",
+// pagination:true,
+// autoplay:false,
 on: {
   init() {
     // ...

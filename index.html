@@ -21,7 +21,8 @@
 <body>
     <div class="main-container">
         <i class="fa-solid fa-bars hamburger" id="hamburger"></i>
-        <!-- <button>☰</button> -->
+      
+         <!-- sidebar navigation -->
         <div class="sidebar" id="sidebar">
             <div class="logo">
                 <img src="/api/placeholder/200/60" alt="Crafted Habitat">
@@ -34,9 +35,15 @@
                         <div class="submenu">
                             <a href="">Who We Are</a>
                             <a href="">Our Journey</a>
-                            <a href="#">Our Process</a>
+                            
                             <a href="#">Our Services</a>
                             <a href="#">Wellbeing In Architecture</a>
+                        </div>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="">Architecture For Wellbeing<i class="fa-solid fa-angle-right"></i></a>
+                        <div class="submenu">
+                            <a href="#">Our Process</a>
                         </div>
                     </li>
                     <li class="menu-item">
@@ -54,6 +61,9 @@
                             <a href="#">Rich Soul Challenge</a>
                         </div>
                     </li>
+                    <li class="menu-item">
+                        <a href="">CONNECT <i class="fa-solid fa-angle-right"></i></a>
+                    </li>
                 </ul>
             </nav>
             <div class="contacts">
@@ -63,15 +73,16 @@
                     <a href="#twitter"><i class="fab fa-twitter"></i></a>
                     <a href="#linkedin"><i class="fab fa-linkedin-in"></i></a>
                 </div>
-                <div class="contact">+233(0) </div>
+                <div class="contact">+233 24 416 9902</div>
                 <div class="copyright">© Crafted Habitat.<br>All rights reserved.</div>
             </div>
         </div>
 
         <div class="main-content">
             <div class="slider-container">
-
-                <swiper-container class="mycarousel" loop="true"   >                         						
+ 
+                <swiper-container class="mycarousel carousel" loop="true" autoplay="true"  autoplay-delay="7000" speed="6000" pagination="true" pagination-clickable="true" 
+                grab-cursor="true">                         						
                     <swiper-slide>
                         <img src="assets/img/home-swipper/green_1.jpg" alt="Slide 1">
                         <div class="slide-overlay">
@@ -131,11 +142,71 @@
                 </div>
                 
             </section>
-
+            <!-- Our service -->
                 <section class="our-service" id="Services">
-                    <!-- <div class="section-title">
-                        <p>our services</p>
-                    </div> -->
+
+                    <!-- <div class="service-carousel">
+                        <swiper-container class="our-service-carousel"  navigation="true" loop="true" slides-per-view="3" space-between="20" css-mode="true">
+                        >                         						
+                            <swiper-slide>
+                                <div class="service-grid-item-c">
+                                    <div class="grid-img" style="background-image: url('/assets/img/service/service\ \(5\).jpg');">
+                                    </div>
+                                    <div class="grid-txt">
+                                        <h3>Signature Architectural Package</h3>
+                                        <p>Bespoke architectural design with wellness integration</p>
+                                    </div>
+                                    <div class="grid-btn">
+                                        <button type="button">Read more</button>
+                                    </div>
+                                </div>
+                            </swiper-slide>
+                            <swiper-slide>
+                                <div class="service-grid-item-c">
+                                    <div class="grid-img" style="background-image: url('/assets/img/service/service\ \(5\).jpg');">
+                                    </div>
+                                    <div class="grid-txt">
+                                        <h3>Signature Architectural Package</h3>
+                                        <p>Bespoke architectural design with wellness integration</p>
+                                    </div>
+                                    <div class="grid-btn">
+                                        <button type="button">Read more</button>
+                                    </div>
+                                </div>
+                            </swiper-slide>
+                            <swiper-slide>
+                                <div class="service-grid-item-c">
+                                    <div class="grid-img" style="background-image: url('assets/img/service/service_\(1\).jpg');">
+                                    </div>
+                                    <div class="grid-txt">
+                                        <h3>Holistic Wellness Retreat & Hospitality Design</h3>
+                                        <p> Bespoke design integrating advanced 
+                                            wellness architecture principles, including materials and layouts that optimize mental, 
+                                            physical, and emotional well-being</p>
+                                    </div>
+                                    <div class="grid-btn">
+                                        <button type="button">Read more</button>
+                                    </div>
+                                </div>
+                            </swiper-slide>
+                            <swiper-slide>
+                                <div class="service-grid-item-c">
+                                    <div class="grid-img" style="background-image: url('assets/img/service/service\ \(2\).jpg');">
+                                    </div>
+                                    <div class="grid-txt">
+                                        <h3>Executive Retreat & Diplomatic Sanctuaries</h3>
+                                        <p>Entire estates or luxury retreats designed for 
+                                            reflection, creativity, and rejuvenation</p>
+                                    </div>
+                                    <div class="grid-btn">
+                                        <button type="button">Read more</button>
+                                    </div>
+                                </div>
+                            </swiper-slide>
+                        </swiper-container>
+                    </div>
+                  -->
+
                     <h2 class="section-title">Services - Our Offer</h2>
                     <div class="service-container">
                         <div class="service-grid">
@@ -163,19 +234,7 @@
                                     <button type="button">Read more</button>
                                 </div>
                             </div>
-                            <div class="service-grid-item">
-                                <div class="grid-img" style="background-image: url('assets/img/service/service\ \(2\).jpg');">
-                                </div>
-                                <div class="grid-txt">
-                                    <h3>Corporate Well-being & Creativity Office Transformation </h3>
-                                    <p>Entire estates or luxury retreats designed for reflection,
-                                        creativity, and rejuvenation</p>
-                                </div>
-                                <div class="grid-btn">
-                                    <button type="button">Read more</button>
-                                </div>
-                            </div>
-                           
+                       
                        
                             <div class="service-grid-item">
                                 <div class="grid-img" style="background-image: url('assets/img/service/service\ \(2\).jpg');">
@@ -192,7 +251,7 @@
                         </div>
                     </div>
                 </section>
-
+                <!-- Our difference section -->
                 <section class="our-difference">                
                 
                     <div class="fancy-skew" id="example-fancy-skew" data-cat="example">
@@ -209,7 +268,7 @@
                                         <div class="link-wrapper">
                                             <a href="#">Soulful Space</a>
                                             <div class="fancy-skew__subtitle">
-                                                <p>Design spaces that nourish the soul, and prioritize physical and emotional wellbeing, fostering an environment that supports personal growth, creativity, and overall happiness.</p>
+                                                <p>Design spaces that nourish the soul, and prioritize physical and emotional wellbeing, <br> fostering an environment that supports personal growth, creativity, and overall happiness.</p>
                                             </div>
                                         </div>
                                     </li>
@@ -226,7 +285,7 @@
                                         <div class="link-wrapper">
                                             <a href="#">Integrate Biophilia</a>
                                             <div class="fancy-skew__subtitle">
-                                                <p>Incorporating plants and nature into both design and experience is key to wellness architecture. Plants enhance cognitive performance, cleanse the air, reduce stress, and eliminate toxins.</p>
+                                                <p>Incorporating plants and nature into both design and experience is key to wellness architecture. <br> Plants enhance cognitive performance, cleanse the air, reduce stress, and eliminate toxins.</p>
                                             </div>
                                         </div>
                                     </li>
@@ -246,11 +305,11 @@
                     </div>
  
                 </section>
-
+                <!-- Winston churchill qoute section -->
                 <section class="winston-churchill-section" id="winston">
                         <div class="win-quote-section" style="background-image: url('assets/img/winston.png');">
                             <div class="winston-churchill-quote">
-                                "We shape our buildings, thereafter they shape us."  Winston Churchill
+                                <q>We shape our buildings, thereafter they shape us.</q>  Winston Churchill
                             </div>
                         </div>
                        
@@ -280,28 +339,42 @@
 
                 <section class="clients-affiliates">
                         <h2 class="section-title">Our Clients & Affiliates</h2>
-                         <div class="clients-review ">
-                            <div class="section__card">
-                        <span><i class="ri-double-quotes-l"></i></span>
-                        <h4>Love the simplicity</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                            Error ut neque magni obcaecati sequi quaerat nesciunt numquam labore.
-                        </p>
-                        <img src="assets/user-1.jpg" alt="user" />
-                        <h5>Floyd Sam & Fam</h5>
-                        <!-- <h6>Managing Director</h6> -->
+                <div class="clients-review ">
+                    <div class="section__card">
+                            <span><i class="ri-double-quotes-l"></i></span>
+                            <h4>Love the simplicity</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                                Error ut neque magni obcaecati sequi quaerat nesciunt numquam labore.
+                            </p>
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <img src="assets/img/user-profile-icon.png" alt="user" />
+                            <h5>Floyd Sam & Fam</h5>
+                            <!-- <h6>Managing Director</h6> -->
                         </div>
                         <div class="section__card">
-                        <span><i class="ri-double-quotes-l"></i></span>
-                        <h4>Excellent Designs</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                            Error ut neque magni obcaecati sequi quaerat nesciunt numquam labore.
-                        </p>
-                        <img src="assets/user-2.jpg" alt="user" />
-                        <h5>Mr Pierre Burgi</h5>
-                        <!-- <h6>Ceo & Founder</h6> -->
+                            <span><i class="ri-double-quotes-l"></i></span>
+                            <h4>Excellent Designs</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                                Error ut neque magni obcaecati sequi quaerat nesciunt numquam labore.
+                            </p>
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <img src="assets/img/user-profile-icon.png" alt="user" />
+                            <h5>Mr Pierre Burgi</h5>
+                            <!-- <h6>Ceo & Founder</h6> -->
                         </div>
                         <div class="section__card">
                         <span><i class="ri-double-quotes-l"></i></span>
@@ -310,7 +383,14 @@
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                             Error ut neque magni obcaecati sequi quaerat nesciunt numquam labore.
                         </p>
-                        <img src="assets/user-3.jpg" alt="user" />
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <img src="assets/img/user-profile-icon.png" alt="user" />
                         <h5>Mr Victor Osei</h5>
                         <!-- <h6>Fashion Designer</h6> -->
                         </div>
@@ -324,7 +404,7 @@
                             <img src="assets/img/logos/Toyota.png" alt="Client Logo 5">
                          
                         </div>
-                    </section>
+                </section>
                 
                 <section class="contact-section">
                 <div class="contact-container">
@@ -350,7 +430,7 @@
                     </form>
                 </div>
                 <div class="footer-qoute-1">
-                     <q>Crafted spaces for visionary leaders - Designed to nurture clarity, creativity, and impactful decisions.”</q>
+                     <q>Crafted spaces for visionary leaders - Designed to nurture clarity, creativity, and impactful decisions.</q>
         
                 </div>
                            <!-- Footer positioned at the bottom -->
@@ -365,7 +445,7 @@
                     <div class="copyright">© Crafted Habitat.<br>All rights reserved.</div>
                 </div>
                     <div class="footer-qoute-1">
-                        <q>"We design sanctuaries for soul, mind, and body—where you can make high-level decisions and experience holistic well-being."
+                        <q>We design sanctuaries for soul, mind, and body—where you can make high-level decisions and experience holistic well-being.
             
                     </div>
              </div>
@@ -379,6 +459,7 @@
     <script src="assets/js/main.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+
             // const slider = document.querySelector('.slider');
             // const slides = document.querySelectorAll('.slide');
             // const controls = document.querySelector('.slider-controls');
