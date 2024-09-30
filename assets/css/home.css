@@ -1281,3 +1281,120 @@ button:hover {
 .content{
     position: relative;
 }
+article section{
+    margin-top: 100px;
+}
+
+/* our journey */
+.journey{
+    margin-left:20px ;
+}
+.timeline {
+    font-family: 'Montserrat';
+    line-height: 1.6;
+    line-gap-override: 3px;
+    color: #333;
+    max-width: 800px;
+    margin: 0px auto;
+    /* padding: 20px; */
+    /* background-color: #f9f5e9; */
+}
+.our-journey h1 {
+    text-align: center;
+    color: #4a4a4a;
+    margin-bottom: 30px;
+}
+.our-journey .timeline {
+    position: relative;
+    padding-left: 30px;
+}
+.our-journey .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #4a4a4a;
+}
+.our-journey .event {
+    position: relative;
+    margin-bottom: 30px;
+}
+.our-journey .event::before {
+    content: '';
+    position: absolute;
+    left: -34px;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #4a4a4a;
+    border-radius: 50%;
+    background: #f9f5e9;
+}
+.event h2 {
+    margin-top: 0;
+    color: #4a4a4a;
+}
+.event p {
+    margin-bottom: 0;
+}
+
+
+.our-offer {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.service-container {
+    display: flex;
+    flex-direction: column;
+}
+.service-item {
+    display: flex;
+    margin-bottom: 50px;
+}
+.service-article {
+    flex: 1;
+    padding: 20px;
+}
+.service-row-img {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
+}
+.service-item:nth-child(even) {
+    flex-direction: row-reverse;
+   
+}
+.service-item:nth-child(odd) {
+    background-color: whitesmoke;
+   
+
+   
+}
+
+.service-article strong {
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 20px;
+}
+.service-article ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.service-article li {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+@media (max-width: 768px) {
+    .service-item, 
+    .service-item:nth-child(even) {
+        flex-direction: column;
+    }
+    .service-row-img {
+        min-height: 200px;
+    }
+}

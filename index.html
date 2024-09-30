@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
      
 </head>
 <body>
@@ -34,9 +34,9 @@
                         <a href="./pages/about-us.html">ABOUT US <i class="fa-solid fa-angle-right"></i></a>
                         <div class="submenu">
                             <a href="./pages/about-us.html#who-we-are">Who We Are</a>
-                            <a href="./pages/about-us.html#journey">Our Journey</a>
+                            <a href="./pages/about/journey.html">Our Journey</a>
                             
-                            <a href="#">Our Services</a>
+                            <a href="./pages/about/ourservices.html">Our Services</a>
                           
                         </div>
                     </li>
@@ -479,9 +479,10 @@
         </div>
     </div>
     <script type="text/javascript" src="assets/lib/_jquery/jquery.min.js"></script>
+    <script src="./assets/js/main.js"></script>
     <script type="text/javascript" src="assets/vendors/swiper/swiper.jquery.js"></script>
     <script type="text/javascript" src="assets/lib/swiper-element-bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
+   
     <script>
         document.addEventListener('DOMContentLoaded', function() {
 
@@ -509,48 +510,48 @@
                 });
             });
 // Constants
-const SLIDE_INTERVAL = 9000; // 5 seconds
-const PAUSE_DURATION = 10000; // 2 minutes
+// const SLIDE_INTERVAL = 9000; // 5 seconds
+// const PAUSE_DURATION = 10000; // 2 minutes
 
 // DOM Elements
-const slider = document.querySelector('.slider');
-const slides = document.querySelectorAll('.slide');
-const controls = document.querySelector('.slider-controls');
+// const slider = document.querySelector('.slider');
+// const slides = document.querySelectorAll('.slide');
+// const controls = document.querySelector('.slider-controls');
 
-let currentSlide = 0;
-let autoSlideInterval;
+// let currentSlide = 0;
+// let autoSlideInterval;
 
 // Create control dots
-const controlDots = Array.from(slides).map((_, index) => {
-    const control = document.createElement('div');
-    control.classList.add('slider-control');
-    control.addEventListener('click', () => handleControlClick(index));
-    controls.appendChild(control);
-    return control;
-});
+// const controlDots = Array.from(slides).map((_, index) => {
+//     const control = document.createElement('div');
+//     control.classList.add('slider-control');
+//     control.addEventListener('click', () => handleControlClick(index));
+//     controls.appendChild(control);
+//     return control;
+// });
 
-function handleControlClick(index) {
-    goToSlide(index);
-    resetAutoSlide();
-}
+// function handleControlClick(index) {
+//     goToSlide(index);
+//     resetAutoSlide();
+// }
 
-function goToSlide(n) {
-    slider.style.transform = `translateX(-${n * 100}%)`;
-    controlDots[currentSlide].classList.remove('active');
-    controlDots[n].classList.add('active');
-    currentSlide = n;
-    // Uncomment the next line if you want to randomize text position
-    // randomizeTextPosition();
-}
+// function goToSlide(n) {
+//     slider.style.transform = `translateX(-${n * 100}%)`;
+//     controlDots[currentSlide].classList.remove('active');
+//     controlDots[n].classList.add('active');
+//     currentSlide = n;
+//     // Uncomment the next line if you want to randomize text position
+//     // randomizeTextPosition();
+// }
 
-function nextSlide() {
-    goToSlide((currentSlide + 1) % slides.length);
-}
+// function nextSlide() {
+//     goToSlide((currentSlide + 1) % slides.length);
+// }
 
-function resetAutoSlide() {
-    clearInterval(autoSlideInterval);
-    autoSlideInterval = setInterval(nextSlide, SLIDE_INTERVAL);
-}
+// function resetAutoSlide() {
+//     clearInterval(autoSlideInterval);
+//     autoSlideInterval = setInterval(nextSlide, SLIDE_INTERVAL);
+// }
 
 // Uncomment this function if you want to use it
 // function randomizeTextPosition() {
@@ -567,8 +568,8 @@ function resetAutoSlide() {
 // }
 
 // Initialize
-goToSlide(0);
-resetAutoSlide();
+// goToSlide(0);
+// resetAutoSlide();
         });
     </script>
 </body>
