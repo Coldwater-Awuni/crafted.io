@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Millenium City Prject</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/home.css">
+</head>
+<body>
+    
+
+    <i class="fa-solid fa-bars hamburger" id="hamburger"></i>
+      
+    <!-- sidebar navigation -->
+   <div class="sidebar" id="sidebar">
+       <div class="logo">
+           <img src="/api/placeholder/200/60" alt="Crafted Habitat">
+       </div>
+       <nav>
+           <ul class="menu">
+               <li class="menu-item"><a href="../../index.html">HOME</a></li>
+               <li class="menu-item">
+                   <a href="../about-us.html">ABOUT US <i class="fa-solid fa-angle-right"></i></a>
+                   <div class="submenu">
+                       <a href="../../pages/about-us.html#who-we-are">Who We Are</a>
+                       <a href="../../pages/about/journey.html">Our Journey</a>
+                       
+                       <a href="../../pages/about/ourservices.html">Our Services</a>
+                     
+                   </div>
+               </li>
+               <li class="menu-item">
+                   <a href="../../pages/wellbeing/ourprocess.html" class="">Architecture For Wellbeing</i></a>
+                   <!-- <div class="submenu">
+                       <a href="#">Our Process</a>
+                   </div> -->
+               </li>
+               <li class="menu-item">
+                   <a href="#">OUR PROJECTS <i class="fa-solid fa-angle-right"></i></a>
+                   <div class="submenu">
+                       <a href="#">Past Projects</a>
+                       <a href="#">International Projects</a>
+                   </div>
+               </li>
+               <li class="menu-item">
+                   <a href="#">RESOURCES <i class="fa-solid fa-angle-right"></i></a>
+                   <div class="submenu">
+                       <a href="#">Building for Diasporans</a>
+                       <a href="#">Hospitality Space</a>
+                       <a href="#">Rich Soul Challenge</a>
+                   </div>
+               </li>
+               <li class="menu-item">
+                   <a href="">CONNECT <i class="fa-solid fa-angle-right"></i></a>
+               </li>
+           </ul>
+       </nav>
+       <div class="contacts">
+           <div class="social">
+               <a href="#instagram"><i class="fab fa-instagram"></i></a>
+               <a href="#facebook"><i class="fab fa-facebook-f"></i></a>
+               <a href="#twitter"><i class="fab fa-twitter"></i></a>
+               <a href="#linkedin"><i class="fab fa-linkedin-in"></i></a>
+           </div>
+           <div class="contact">+233 24 416 9902</div>
+           <div class="copyright">© Crafted Habitat.<br>All rights reserved.</div>
+       </div>
+   </div>
+   <!-- floating icon -->
+   <div class="floating-button-container">
+       <div class="floating-button"><i class="fa-regular fa-message"></i></div>
+       <div class="contact-icons">
+           <a href="https://wa.me/1234567890" target="_blank" class="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+           <a href="mailto:example@example.com" class="email"><i class="fa-solid fa-envelope icon"></i></a>
+       </div>
+   </div>
+   <main class="main-content">
+       <div class="our-projects">       
+           <article>
+               <section class="project-info">
+                <h2>About The Millenium City Project</h2>
+                <p>The  Millenium City project showcases our commitment to blending modern design with local cultural elements. This luxurious residential property features spacious living areas, state-of-the-art amenities, and sustainable building practices.</p>
+            </section>
+
+            <section class="gallery">
+                <div class="gallery-item">
+                    <img src="../../assets/img/projects/millenium-city/MilFR.jpg" alt="Living Room">
+                    <p>Elegant exterior showcasing architectural design</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="../../assets/img/projects/millenium-city/Picture20.jpg" alt="Kitchen">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur corrupti natus voluptates cum! Ut</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="../../assets/img/projects/millenium-city/Picture7.jpg" alt="Bedroom">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur corrupti natus voluptates cum! Ut</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="../../assets/img/projects/millenium-city/Milrooftop.jpg" alt="Bedroom">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur corrupti natus voluptates cum! Ut</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="../../assets/img/projects/millenium-city/Milplan1.jpg" alt="Exterior">
+                    <p>architectural design</p>
+                </div>
+                <!-- Add more gallery items as needed -->
+            </section>
+         
+             
+
+           
+               
+               
+           </article>
+    
+    
+           
+       </div>
+       
+   </main>
+
+
+
+
+    <script type="text/javascript" src="../assets/lib/_jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/vendors/swiper/swiper.jquery.js"></script>
+    <script type="text/javascript" src="assets/lib/swiper-element-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+        
+            // Hamburger menu functionality
+            const hamburger = document.getElementById('hamburger');
+            const sidebar = document.getElementById('sidebar');
+            const menuItems = document.querySelectorAll('.menu-item');
+
+            hamburger.addEventListener('click', () => {
+                sidebar.classList.toggle('active');
+            });
+
+            menuItems.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        item.classList.toggle('active');
+                    }
+                });
+            });
+
+
+
+        });
+    </script>
+</body>
+</html>
