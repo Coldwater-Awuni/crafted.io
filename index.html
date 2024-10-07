@@ -19,9 +19,92 @@
      
 </head>
 <style>
-    section{
-        position: relative;
-    }
+    .modal {
+            display: none;
+            position: fixed;
+            z-index: 10;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: opacity 0.3s ease-in-out;
+            opacity: 0;
+        }
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+        }
+        .modal-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            animation: slideIn 0.3s ease-out;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .modal h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #1f2937;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .modal label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #4b5563;
+            margin-bottom: 0.5rem;
+        }
+        .modal input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.375rem;
+            font-size: 1rem;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+        .modal input:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        .modal button {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #3b82f6;
+            color: white;
+            font-size: 1rem;
+            font-weight: 500;
+            border: none;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            transition: background-color 0.15s ease-in-out;
+        }
+        .modal button:hover {
+            background-color: #2563eb;
+        }
+        .modal button:disabled {
+            background-color: #9ca3af;
+            cursor: not-allowed;
+        }
 </style>
 <body>
     <div class="main-container">
@@ -40,7 +123,6 @@
                         <div class="submenu">
                             <a href="./pages/about-us.html#who-we-are">Who We Are</a>
                             <a href="./pages/about/journey.html">Our Journey</a>
-                            
                             <a href="./pages/about/ourservices.html">Our Services</a>
                           
                         </div>
@@ -54,20 +136,22 @@
                     <li class="menu-item">
                         <a href="./pages/projects/project.html">OUR PROJECTS <i class="fa-solid fa-angle-right"></i></a>
                         <div class="submenu">
-                            <a href="#">Past Projects</a>
-                            <a href="#">International Projects</a>
+                            <a href="./pages/projects/project.html">Past Projects</a>
+                            <a href="./pages/projects/project.html">Current Projects</a>
                         </div>
                     </li>
                     <li class="menu-item">
                         <a href="#">RESOURCES <i class="fa-solid fa-angle-right"></i></a>
                         <div class="submenu">
-                            <a href="https://drive.google.com/file/d/10zVcqUjVzyYQPSUfMeICmYIexgMoMKPB/view">Building for Diasporans</a>
-                            <a href="https://drive.google.com/file/d/1MtLYWOWUKYoqeOvzKqGJ84aeNyRdQa0B/view?usp=drivesdk">Hospitality Space</a>
+                            <a href="#" onclick="showForm('https://drive.google.com/file/d/10zVcqUjVzyYQPSUfMeICmYIexgMoMKPB/view')">Building for Diasporans</a>
+                            <a href="#" onclick="showForm('https://drive.google.com/file/d/1MtLYWOWUKYoqeOvzKqGJ84aeNyRdQa0B/view?usp=drivesdk')">Hospitality Space</a>
                             <a href="#">Rich Soul Challenge</a>
                         </div>
                     </li>
                     <li class="menu-item">
-                        <a href="">CONNECT <i class="fa-solid fa-angle-right"></i></a>
+                        <a href="">CONNECT 
+                            
+                        </a>
                     </li>
                 </ul>
             </nav>
@@ -78,10 +162,28 @@
                     <a href="#twitter"><i class="fab fa-twitter"></i></a>
                     <a href="#linkedin"><i class="fab fa-linkedin-in"></i></a>
                 </div>
-                <div class="contact">+233 24 416 9902</div>
+                <div class="contact">+233 20 777 2556</div>
                 <div class="copyright">© Crafted Habitat.<br>All rights reserved.</div>
             </div>
         </div>
+             <!-- Form Modal -->
+             <div id="formModal" class="modal">
+                <div class="modal-content">
+                    <h2>Fill out this form</h2>
+                    <form id="infoForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email">
+                        </div>
+                        <button type="submit" id="submitBtn">Submit</button>
+                    </form>
+                </div>
+            </div>
+    
         <!-- floating icon -->
         <div class="floating-button-container">
             <div class="floating-button"><i class="fa-regular fa-message"></i></div>
@@ -90,7 +192,9 @@
                 <a href="mailto:example@example.com" class="email"><i class="fa-solid fa-envelope icon"></i></a>
             </div>
         </div>
+        
 
+    
     <!-- Newsletter Popup Overlay -->
         <div id="popup-container">
             <!-- <span class="close-btn" id="close-btn"><i class="fa-solid fa-xmark"></i></span> -->
@@ -100,7 +204,7 @@
             <div class="slider-container">
  
                 <swiper-container class="mycarousel carousel" loop="true"  speed="6000" pagination="true" navigation="false" autoplay-delay="6000" pagination-clickable="true" 
-                grab-cursor="true">                         						
+                grab-cursor="false">                         						
                     <swiper-slide>
                         <img src="assets/img/home-swipper/green_1.jpg" alt="Slide 1">
                         <div class="slide-overlay">
@@ -109,7 +213,7 @@
                         </div>
                     </swiper-slide>
                     <swiper-slide>
-                        <img src="assets/img/home-swipper/home_2.png" alt="Slide 1">
+                        <img src="assets/img/home-swipper/office_1.png" alt="Slide 1">
                         <div class="slide-overlay">
                             <div class="slide-title">That's why we evolved into <span class="crafted" style="font-size: 4.0rem;"> Craft'd Habitat</span></div>
                             <!-- <div class="slide-description">That's why we evolved into Craft'd Habitat</div> -->
@@ -121,16 +225,7 @@
                             <div class="slide-title">We Create Spaces that Nurture Holistic Wellbeing</div>
                             <div class="slide-description">Where every design prioritizes human experience and health</div>
                         </div>
-                    </swiper-slide>
-                    
-                    <swiper-slide>
-                        <img src="assets/img/home-swipper/office_1.png" alt="Slide 3">
-                        <div class="slide-overlay">
-                            <div class="slide-title">High-Level Executives and Decision Makers</div>
-                            <!-- <div class="slide-description"></div> -->
-                        </div>
-                    </swiper-slide>
-               
+                    </swiper-slide>                                  
                     <swiper-slide>
                         <img src="assets/img/home-swipper/green_1.jpg" alt="Slide 1">
                         <div class="slide-overlay">
@@ -164,7 +259,8 @@
                 <section class="quote-section">
                     <div class="quotes">
                         <div class="quote-1">
-                            <q>If our buildings are not enriching us, they are impoverishing us</q>
+                            <q>There is growing evidence and awareness that if our surroundings are not actively enriching us, they are impoverishing us  
+                                </q><a href="https://www.matterspacesoul.com/post/compassionate-spaces-architecture-that-harnesses-the-emotional-and-social-power-of-places">Source</a>
                         </div>
                         <div class="quotes-context">
                             <p>"We all recognize the profound impact of being in well-crafted spaces. Research in neuroscience and environmental psychology reveals how thoughtfully designed environments can enhance our cognitive well-being and emotional balance. At Crafted Habitat, we draw upon these insights, using natural materials, 
@@ -414,7 +510,7 @@
                         <a href="#twitter"><i class="fab fa-twitter"></i></a>
                         <a href="#linkedin"><i class="fab fa-linkedin-in"></i></a>
                     </div>
-                    <div class="contact-number">+233 24 416 9902</div>
+                    <div class="contact-number">+233 20 777 2556</div>
                     <div class="copyright">© Crafted Habitat.<br>All rights reserved.</div>
                 </div>
                     <div class="footer-qoute-1">
@@ -451,6 +547,51 @@
             xhr.send();
         }
    </script> -->
+   <script>
+            let currentUrl = '';
+
+        // Show the form modal
+        function showForm(url) {
+            currentUrl = url;
+            document.getElementById('formModal').classList.add('active');
+        }
+
+// Hide the modal when clicked outside of the content
+        window.onclick = function (event) {
+            if (event.target == document.getElementById('formModal')) {
+                closeModal();
+            }
+        }
+
+        // Close the modal
+        function closeModal() {
+            document.getElementById('formModal').classList.remove('active');
+        }
+
+        // Form Submission Handler
+        document.getElementById('infoForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const submitBtn = document.getElementById('submitBtn');
+
+            if (name && email) {
+                // Disable submit button to prevent multiple submissions
+                submitBtn.disabled = true;
+                submitBtn.innerText = 'Submitting...';
+
+                // Log form data
+                console.log('Form submitted:', { name, email });
+
+                // Close modal after form submission
+                closeModal();
+
+                // Redirect to the provided URL
+                window.open(currentUrl, '_blank');
+            }
+        });
+   </script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
 

@@ -23,19 +23,18 @@
         <i class="fa-solid fa-bars hamburger" id="hamburger"></i>
       
          <!-- sidebar navigation -->
-        <div class="sidebar" id="sidebar">
+         <div class="sidebar" id="sidebar">
             <div class="logo">
-                <img src="/api/placeholder/200/60" alt="Crafted Habitat">
+                <img src="../assets/svg/crafted_habitat.svg" alt="Crafted Habitat">
             </div>
             <nav>
                 <ul class="menu">
-                    <li class="menu-item"><a href="#../../../index.html">HOME</a></li>
+                    <li class="menu-item"><a href="../index.html">HOME</a></li>
                     <li class="menu-item">
                         <a href="../pages/about-us.html">ABOUT US <i class="fa-solid fa-angle-right"></i></a>
                         <div class="submenu">
                             <a href="../pages/about-us.html#who-we-are">Who We Are</a>
                             <a href="../pages/about/journey.html">Our Journey</a>
-                            
                             <a href="../pages/about/ourservices.html">Our Services</a>
                           
                         </div>
@@ -47,22 +46,24 @@
                         </div> -->
                     </li>
                     <li class="menu-item">
-                        <a href="#">OUR PROJECTS <i class="fa-solid fa-angle-right"></i></a>
+                        <a href="../pages/projects/project.html">OUR PROJECTS <i class="fa-solid fa-angle-right"></i></a>
                         <div class="submenu">
-                            <a href="#">Past Projects</a>
-                            <a href="#">International Projects</a>
+                            <a href="../pages/projects/project.html">Past Projects</a>
+                            <a href="../pages/projects/project.html">Current Projects</a>
                         </div>
                     </li>
                     <li class="menu-item">
                         <a href="#">RESOURCES <i class="fa-solid fa-angle-right"></i></a>
                         <div class="submenu">
-                            <a href="#">Building for Diasporans</a>
-                            <a href="#">Hospitality Space</a>
+                            <a href="#" onclick="showForm('https://drive.google.com/file/d/10zVcqUjVzyYQPSUfMeICmYIexgMoMKPB/view')">Building for Diasporans</a>
+                            <a href="#" onclick="showForm('https://drive.google.com/file/d/1MtLYWOWUKYoqeOvzKqGJ84aeNyRdQa0B/view?usp=drivesdk')">Hospitality Space</a>
                             <a href="#">Rich Soul Challenge</a>
                         </div>
                     </li>
                     <li class="menu-item">
-                        <a href="">CONNECT <i class="fa-solid fa-angle-right"></i></a>
+                        <a href="">CONNECT 
+                            
+                        </a>
                     </li>
                 </ul>
             </nav>
@@ -73,10 +74,11 @@
                     <a href="#twitter"><i class="fab fa-twitter"></i></a>
                     <a href="#linkedin"><i class="fab fa-linkedin-in"></i></a>
                 </div>
-                <div class="contact">+233 24 416 9902</div>
+                <div class="contact">+233 20 777 2556</div>
                 <div class="copyright">© Crafted Habitat.<br>All rights reserved.</div>
             </div>
         </div>
+       
         <!-- floating icon -->
         <div class="floating-button-container">
             <div class="floating-button"><i class="fa-regular fa-message"></i></div>
@@ -97,10 +99,8 @@
                         </h1>
                     </div>
                     <section id="who-we-are">
-                        <div class="body-text">   
-                            
+                        <div class="body-text">                              
                             <p>
-                               
                                 <div class="who-we-are-intro">
                                 <strong class="body-text-title" style="text-transform: capitalize;"> Who we are</strong> 
                                <br>
@@ -149,16 +149,15 @@
                         <div class="body-text">
                             <div>
                                 <strong class="body-text-title" >The Crafted Habitat Difference</strong>
-                                <br> <br>
+                                <br> 
                                 <strong>Soulful Design </strong>– spaces can evolve into sanctuaries of serenity interplay of nature and thoughtful design nurturs the soul.  
-                                <br>
-                                <br>
+                                <br>                
                                 <strong>Holistic wellbeing </strong>– a shift that explicitly puts peoples wellness at the centre of the conception, design, 
                                 and creation of our homes and neighbourhoods
-                                <br><br>
+                                <br>
                                 <strong>Biophilia Integration</strong>- Incorporating plants and nature into both design and experience is a key element of true wellness architecture.
                                  Plants are proven to enhance cognitive performance, cleanse the air, lower stress and reduce toxins.
-                                <br><br>
+                                <br>
                                 <strong>Advanced Technology</strong>-  We use AI to quickly generate images. We move with speed. We empower clients to visualize before project is done
                             </div>
                             
@@ -180,7 +179,7 @@
                                 At the heart of our firm are our core values: 
                                 <br>
                                 <br>
-                                <span class="values"> <img src="../assets/img/about/yogi.png" alt="" class="about-icon"> Soulfulness, </span>
+                                <span class="values"> <img src="../assets/img/about/lotus.png" alt="" class="about-icon"> Soulfulness, </span>
                                 <br>
                                 <br>
                                 <span class="values"> <img src="../assets/img/about/integrity2.svg" alt="" class="about-icon"> Integrity, </span>
@@ -263,6 +262,52 @@
     <script type="text/javascript" src="assets/vendors/swiper/swiper.jquery.js"></script>
     <script type="text/javascript" src="assets/lib/swiper-element-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
+    
+     <script>
+            let currentUrl = '';
+
+        // Show the form modal
+        function showForm(url) {
+            currentUrl = url;
+            document.getElementById('formModal').classList.add('active');
+        }
+
+// Hide the modal when clicked outside of the content
+        window.onclick = function (event) {
+            if (event.target == document.getElementById('formModal')) {
+                closeModal();
+            }
+        }
+
+        // Close the modal
+        function closeModal() {
+            document.getElementById('formModal').classList.remove('active');
+        }
+
+        // Form Submission Handler
+        document.getElementById('infoForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const submitBtn = document.getElementById('submitBtn');
+
+            if (name && email) {
+                // Disable submit button to prevent multiple submissions
+                submitBtn.disabled = true;
+                submitBtn.innerText = 'Submitting...';
+
+                // Log form data
+                console.log('Form submitted:', { name, email });
+
+                // Close modal after form submission
+                closeModal();
+
+                // Redirect to the provided URL
+                window.open(currentUrl, '_blank');
+            }
+        });
+   </script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
 
