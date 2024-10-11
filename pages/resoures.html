@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/home.css">
 </head>
+
 <style>
     .container {
         max-width: 1200px;
@@ -81,7 +82,7 @@
 
     /* Form Section */
     .form-section {
-        max-width: 1000px;
+        width: 100%;
         margin: 20px auto;
         padding: 20px;
         background-color: #fff;
@@ -136,8 +137,19 @@
         background-color: #ecdbd2;
         color: #4b664a;
     }
-</style>
 
+    /* Responsive Design for Small Screens */
+    @media (max-width: 768px) {
+        .form-section {
+            grid-template-columns: 1fr; /* Single column layout */
+            text-align: center;
+        }
+
+        .form-section img {
+            margin-bottom: 20px;
+        }
+    }
+</style>
 <body>
     
 
@@ -173,16 +185,17 @@
                         <a href="../../pages/projects/project.html">Current Projects</a>
                     </div>
                 </li>
+                
                 <li class="menu-item">
-                    <a href="#">RESOURCES <i class="fa-solid fa-angle-right"></i></a>
+                    <a href="/pages/resoures.html">RESOURCES <i class="fa-solid fa-angle-right"></i></a>
                     <div class="submenu">
-                        <a href="#" onclick="showForm('https://drive.google.com/file/d/10zVcqUjVzyYQPSUfMeICmYIexgMoMKPB/view')">Building for Diasporans</a>
-                        <a href="#" onclick="showForm('https://drive.google.com/file/d/1MtLYWOWUKYoqeOvzKqGJ84aeNyRdQa0B/view?usp=drivesdk')">Hospitality Space</a>
+                        <a href="/pages/resoures.html#resourceBooks" >Building for Diasporans</a>
+                        <a href="/pages/resoures.html#resourceBooks" >Hospitality Space</a>
                         <a href="#">Rich Soul Challenge</a>
                     </div>
                 </li>
                 <li class="menu-item">
-                    <a href="">CONNECT 
+                    <a href="/pages/connect.html">CONNECT 
                         
                     </a>
                 </li>
@@ -219,7 +232,7 @@
                 </h1>
             </div>
             <div class="container">
-                <div class="resource-grid">
+                <div class="resource-grid" id="resourceBooks">
                     <div class="resource-item">
                         <img src="/assets/img/resources/customDreamHome.jpg" alt="Resource 1">
                         <h2>Your custom dream home building guide</h2>
