@@ -1,0 +1,412 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/home.css">
+</head>
+
+<style>
+      h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .map-container {
+        flex: 1;
+        /* min-width: 300px; */
+        padding-left: 20px;
+    }
+
+    .map-container iframe {
+        width: 100%;
+        height: 450px;
+        border: none;
+    }
+
+    .info-container {
+        flex: 1;
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .info-section {
+        margin-bottom: 20px;
+    }
+
+    .info-section h2 {
+        font-size: 1.4em;
+        margin-bottom: 10px;
+    }
+
+    .info-section p {
+        margin: 5px 0;
+        font-size: 1em;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .column {
+        flex: 1;
+    }
+/* General Container */
+.appointment-container {
+    margin: 60px auto;
+    padding: 30px;
+    max-width: 600px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Style */
+.appointment-container h2 {
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Form Container */
+.appointment-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.appointment-form .row {
+    grid-column: span 2;
+}
+
+.appointment-form .column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form Label Style */
+.appointment-form label {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Input Field Style */
+.appointment-form input[type="text"],
+.appointment-form input[type="email"],
+.appointment-form input[type="tel"],
+.appointment-form input[type="datetime-local"] {
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+    outline: none;
+}
+
+.appointment-form input[type="text"]:focus,
+.appointment-form input[type="email"]:focus,
+.appointment-form input[type="tel"]:focus,
+.appointment-form input[type="datetime-local"]:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 6px rgba(76, 175, 80, 0.3);
+}
+
+/* Submit Button Style */
+.appointment-form input[type="submit"] {
+    grid-column: span 2;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.appointment-form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+    .appointment-form {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+        }
+
+        .map-container {
+            margin-right: 0;
+        }
+
+        .row {
+            flex-direction: column;
+        }
+    }
+
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 2em;
+        }
+
+        .info-section h2 {
+            font-size: 1.2em;
+        }
+
+        .info-section p {
+            font-size: 0.9em;
+        }
+    }
+</style>
+
+<body>
+    <i class="fa-solid fa-bars hamburger" id="hamburger"></i>
+      
+    <!-- sidebar navigation -->
+    <div class="sidebar" id="sidebar">
+        <div class="logo">
+            <img src="../../assets/svg/crafted_habitat.svg" alt="Crafted Habitat">
+        </div>
+        <nav>
+            <ul class="menu">
+                <li class="menu-item"><a href="../../index.html">HOME</a></li>
+                <li class="menu-item">
+                    <a href="../../pages/about-us.html">ABOUT US <i class="fa-solid fa-angle-right"></i></a>
+                    <div class="submenu">
+                        <a href="../../pages/about-us.html#who-we-are">Who We Are</a>
+                        <a href="../../pages/about/journey.html">Our Journey</a>
+                        <a href="../../pages/about/ourservices.html">Our Services</a>
+                      
+                    </div>
+                </li>
+                <li class="menu-item">
+                    <a href="../../pages/wellbeing/ourprocess.html" class="">Architecture For Wellbeing</i></a>
+                    <!-- <div class="submenu">
+                        <a href="#">Our Process</a>
+                    </div> -->
+                </li>
+                <li class="menu-item">
+                    <a href="../../pages/projects/project.html">OUR PROJECTS <i class="fa-solid fa-angle-right"></i></a>
+                    <div class="submenu">
+                        <a href="../../pages/projects/project.html">Past Projects</a>
+                        <a href="../../pages/projects/project.html">Current Projects</a>
+                    </div>
+                </li>
+                <li class="menu-item">
+                    <a href="#">RESOURCES <i class="fa-solid fa-angle-right"></i></a>
+                    <div class="submenu">
+                        <a href="#" onclick="showForm('https://drive.google.com/file/d/10zVcqUjVzyYQPSUfMeICmYIexgMoMKPB/view')">Building for Diasporans</a>
+                        <a href="#" onclick="showForm('https://drive.google.com/file/d/1MtLYWOWUKYoqeOvzKqGJ84aeNyRdQa0B/view?usp=drivesdk')">Hospitality Space</a>
+                        <a href="#">Rich Soul Challenge</a>
+                    </div>
+                </li>
+                <li class="menu-item">
+                    <a href="">CONNECT 
+                        
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="contacts">
+            <div class="social">
+                <a href="https://www.instagram.com/epignotects_ad" target="_blank"><i class="fab fa-instagram"></i></a>
+                                  <a href="https://www.facebook.com/epignotects" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="https://www.linkedin.com/epignotects-ad" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#pinterest"><i class="fa-brands fa-pinterest"></i></a>
+                                <a href="#houzz"><i class="fa-brands fa-houzz"></i></a>
+            </div>
+            <div class="contact">+233 20 777 2556</div>
+            <div class="copyright">© Crafted Habitat.<br>All rights reserved.</div>
+        </div>
+    </div>
+
+   <!-- floating icon -->
+   <div class="floating-button-container">
+       <div class="floating-button"><i class="fa-regular fa-message"></i></div>
+       <div class="contact-icons">
+           <a href="https://wa.me/1234567890" target="_blank" class="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+           <a href="mailto:info@craftdhabitat.com" class="email"><i class="fa-solid fa-envelope icon"></i></a>
+       </div>
+   </div>
+   <main class="main-content">
+       <div class="connect">       
+           <article>
+
+               <div class="">
+                   <h1 class="intro-text">
+                      Connect with us
+                   </h1>
+               </div>
+
+            
+               <section class="connct-with-us">
+                <div class="container">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15882.87557578724!2d-0.255682!3d5.608473!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9936719e5263%3A0xde2e46c65ed77253!2sepignotects%20Architecture%20%26%20Development!5e0!3m2!1sen!2sus!4v1728441786430!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="info-container">
+                        <div class="info-section">
+                            <h2>Accra Ghana</h2>
+                        </div>
+                        <div class="row">
+                            <div class="column">
+                                <div class="info-section">
+                                    <h2>Press Inquiries</h2>
+                                    <p>office@craftdhabitat.com</p>
+                                </div>
+                                <div class="info-section">
+                                    <h2>General Information</h2>
+                                    <p>info@craftdhabitat.com</p>
+                                </div>
+                                <div class="info-section">
+                                    <h2>Visiting Address</h2>
+                                    <p>N03 Flower Street</p>
+                                    <p>Kwashibu, Accra</p>
+                                    <p>Ghana</p>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="info-section">
+                                    <h2>Post Address</h2>
+                                    <p> P.O.Box AN 7849</p>
+                                    <p> N0 4 West Mccarthy Hill</p>
+                                    <p>Accra - North </p>
+                                </div>
+                               
+
+                                <div class="info-section">
+                                    <h2>Contact Numbers</h2>
+                                    <p>+233 20 777 2556</p>
+                                    <p>+233 20 777 2556</p>
+                                </div>
+                            </div>
+                            
+                           
+                        </div>
+                       
+
+                        <!-- <div class="row">
+                            <div class="column">
+                               
+                            </div>
+                           
+                        </div> -->
+                    </div>
+                </div>
+
+               
+            </section>
+
+                <!-- Book Appointment Section -->
+                <section class="appointment-container">
+                    <h2>Book an Appointment</h2>
+                    <form class="appointment-form" action="/submit-appointment" method="POST">
+                        <div class="row">
+                            <div class="column">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                            </div>
+                        </div>
+                
+                        <div class="row">
+                            <div class="column">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="column">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                            </div>
+                        </div>               
+                        <div class="row">
+                            <label for="appointment-date">Select Date and Time</label>
+                            <input type="datetime-local" id="appointment-date" name="appointment-date" required>
+                        </div>
+                        <div class="row">
+                            <input type="submit" value="Book Appointment">
+                        </div>
+                    </form>
+                </section>
+                
+           </article>
+    
+    
+           
+       </div>
+       
+   </main>
+
+
+
+
+    <script type="text/javascript" src="../assets/lib/_jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/vendors/swiper/swiper.jquery.js"></script>
+    <script type="text/javascript" src="assets/lib/swiper-element-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+        
+            // Hamburger menu functionality
+            const hamburger = document.getElementById('hamburger');
+            const sidebar = document.getElementById('sidebar');
+            const menuItems = document.querySelectorAll('.menu-item');
+
+            hamburger.addEventListener('click', () => {
+                sidebar.classList.toggle('active');
+            });
+
+            menuItems.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        item.classList.toggle('active');
+                    }
+                });
+            });
+
+
+
+        });
+    </script>
+</body>
+
+
+</html>

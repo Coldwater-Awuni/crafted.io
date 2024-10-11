@@ -44,6 +44,8 @@
     article{
         line-height: 1.9;
     }
+   
+
     .main-container {
         display: flex;
         height: 100%;
@@ -231,14 +233,15 @@ swiper-container {
         padding: 20px;
     }
     .slide-title {
-        font-size: 2.5em;
+        font-size: 2.0em;
         font-weight: bold;
         margin-bottom: 20px;
         font-family: 'Playfair Display';
         text-transform: capitalize;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
     }
     .crafted{
-        
+        color: var(--primary-color);
     }
     .slide-description {
         font-size: 1.2em;
@@ -435,7 +438,7 @@ swiper-container {
 
 .quotes {
     margin: 0% 10%;
-    padding: 1% 10%;
+    /* padding: 1% 10%; */
     display: flex;
     text-align: center;
     flex-direction: column;
@@ -499,7 +502,7 @@ swiper-container {
     }
     
     .quote-section {
-        padding: 0 15%;
+        /* padding: 0 15%; */
     }
 
     .quote-1 q, .quote-2 q {
@@ -523,7 +526,7 @@ swiper-container {
     }
 
     .quote-section {
-        padding: 0 5%;
+        /* padding: 0 5%; */
     }
 
     .quote-1 q, .quote-2 q {
@@ -797,7 +800,7 @@ swiper-container {
 /* Winston-Churchill quote */
 .win-quote-section {
     height: 80vh;
-    
+    background-image: url('../img/winston.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -806,8 +809,17 @@ swiper-container {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    
     background-position-x: right;
 }
+
+@media (max-width: 768px) {
+    .win-quote-section{
+        background-image: url('../img/winstonsmall.png');
+        background-size: cover;
+    }
+}
+
 .win-quote-section::before {
     content: '';
     position: absolute;
@@ -868,7 +880,7 @@ swiper-container {
             margin: 0;
         }
         .read-more {
-            background-color: #7a4f48;
+            background-color: var(--primary-color_2);
             color: white;
             border: none;
             padding: 0.5rem 1rem;
@@ -879,8 +891,14 @@ swiper-container {
             align-self: center;
         }
         .read-more:hover {
-            background-color: #9ac752;
+            background-color: var(--primary-color);
+           color: #000000;
         }
+        .read-more a{
+            text-decoration: none;
+
+        }
+        
         .project-item:hover .read-more {
             opacity: 1;
         }
@@ -896,7 +914,8 @@ swiper-container {
 }
 
 .clients-review {
-    display: grid;
+    display: none;
+    /* display: grid; */
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 2rem;
@@ -1199,13 +1218,20 @@ swiper-container {
     justify-content: center;
     gap: 1rem;
     margin-bottom: 1rem;
+    /* color: var(--primary-color); */
 }
+
+
 
 .contact-number, .footer-container .copyright {
     color: #ffffff;
     font-size: 0.9rem;
 }
 
+
+.footer-container .social a{
+    color: var(--primary-color);
+}
 /* Footer Quotes Styling */
 .footer-qoute-1, .footer-qoute-2 {
     text-align: center;
@@ -1294,6 +1320,9 @@ swiper-container {
     margin: 20px auto;
     /* text-align: justify; */
 }
+.body-media{
+    margin: 100px auto;
+}
 .about-article .body-text-title{
 font-size: 1.4rem;
 }
@@ -1341,11 +1370,9 @@ font-size: 1.4rem;
 } */
 
 /* our journey */
-.journey{
-    margin-left:20px ;
-}.journey {
+.journey {
     font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
+    line-height: 1.9;
     color: #333;
     max-width: 1200px;
     margin: 0 auto;
@@ -1363,7 +1390,7 @@ font-size: 1.4rem;
     max-width: 500px;
     position: relative;
     padding-left: 30px;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
 }
 
 .timeline::before {
@@ -1378,7 +1405,7 @@ font-size: 1.4rem;
 
 .event {
     position: relative;
-    margin-bottom: 30px; /* Reduced from 50px */
+    margin-bottom: 100px; /* Reduced from 50px */
 }
 
 .event::before {
@@ -1403,9 +1430,9 @@ font-size: 1.4rem;
     margin-bottom: 0;
 }
 
-.row img {
+.journey .row img {
     width: 100%;
-    /* max-height: 2010px; */
+    /* min-height: 1010px; */
     object-fit: cover;
     position: sticky;
     top: 20px;
@@ -1436,7 +1463,7 @@ font-size: 1.4rem;
     }
 
     .timeline {
-        background-color: rgba(255, 255, 255, 0.8);
+        /* background-color: rgba(255, 255, 255, 0.8); */
         padding: 20px;
         border-radius: 10px;
     }
@@ -1617,7 +1644,7 @@ z-index:1;
 .process .intro h1 {
     font-size: 2rem;
 }
-.rev{
+.green{
     color: var(--primary-color_2);
 }
 .process .intro, .process-conclusion , .green-text {
@@ -1826,6 +1853,11 @@ z-index:1;
 .list-item--tall {
     grid-row: span 2;
 }
+/* .list-item--tall-wide{
+    grid-column: span 3;
+    grid-row: span 1.5;
+
+} */
 
 .list-item--tall .list-item__figure {
     padding-bottom: 133.34%;  /* 3:4 aspect ratio for tall items */
@@ -2034,9 +2066,11 @@ z-index:1;
     transform: translate3d(0, 70px, 0) scale(1);
     transition: opacity .5s, transform .5s;
 }
-
+.project-sections .gallery{
+    margin-top: 90px;
+}
 @media only screen and (min-width: 900px) {
-    .img-0 {
+    .img-0 ,.img-01,.img-02,.img-03,.img-04{
         -ms-grid-column-span: 10;
         grid-column-start: 1;
         grid-column-end: 11;
@@ -2044,16 +2078,20 @@ z-index:1;
 }
 
 @media only screen and (min-width: 600px) {
-    .img-0 {
+    .img-0 ,.img-01,.img-02,.img-03,.img-04 {
         -ms-grid-column-span: 11;
         grid-column-start: 1;
         grid-column-end: -1;
     }
 }
 
-.img-0 {
+.img-0 ,.img-01,.img-02,.img-03,.img-04{
     width: 100%;
 }
+
+/* .img-01{
+    width: 100%;
+} */
 
 @media only screen and (min-width: 600px) {
     .project-image {

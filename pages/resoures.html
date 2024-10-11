@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/home.css">
+</head>
+<style>
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    .resource-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .resource-item {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .resource-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .resource-item img {
+        max-width: 100%;
+        height: 250px;
+        border-radius: 4px;
+        margin-bottom: 15px;
+    }
+
+    .resource-item h2 {
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .resource-item p {
+        color: #666;
+        margin-bottom: 15px;
+    }
+
+    .read-more-btn {
+        display: inline-block;
+        background-color: #4b664a;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    .read-more-btn:hover {
+        background-color: #ecdbd2;
+        color: #4b664a;
+    }
+
+    /* Form Section */
+    .form-section {
+        max-width: 1000px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        transition: all 0.5s ease;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .form-section.visible {
+        opacity: 1;
+        height: auto;
+    }
+
+    .form-section img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .form-section h2 {
+        color: #333;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .form-section input[type="text"],
+    .form-section input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .form-section button {
+        padding: 10px 20px;
+        background-color: #4b664a;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .form-section button:hover {
+        background-color: #ecdbd2;
+        color: #4b664a;
+    }
+</style>
+
+<body>
+    
+
+    <i class="fa-solid fa-bars hamburger" id="hamburger"></i>
+      
+    <!-- sidebar navigation -->
+    <div class="sidebar" id="sidebar">
+        <div class="logo">
+            <img src="../../assets/svg/crafted_habitat.svg" alt="Crafted Habitat">
+        </div>
+        <nav>
+            <ul class="menu">
+                <li class="menu-item"><a href="../../index.html">HOME</a></li>
+                <li class="menu-item">
+                    <a href="../../pages/about-us.html">ABOUT US <i class="fa-solid fa-angle-right"></i></a>
+                    <div class="submenu">
+                        <a href="../../pages/about-us.html#who-we-are">Who We Are</a>
+                        <a href="../../pages/about/journey.html">Our Journey</a>
+                        <a href="../../pages/about/ourservices.html">Our Services</a>
+                      
+                    </div>
+                </li>
+                <li class="menu-item">
+                    <a href="../../pages/wellbeing/ourprocess.html" class="">Architecture For Wellbeing</i></a>
+                    <!-- <div class="submenu">
+                        <a href="#">Our Process</a>
+                    </div> -->
+                </li>
+                <li class="menu-item">
+                    <a href="../../pages/projects/project.html">OUR PROJECTS <i class="fa-solid fa-angle-right"></i></a>
+                    <div class="submenu">
+                        <a href="../../pages/projects/project.html">Past Projects</a>
+                        <a href="../../pages/projects/project.html">Current Projects</a>
+                    </div>
+                </li>
+                <li class="menu-item">
+                    <a href="#">RESOURCES <i class="fa-solid fa-angle-right"></i></a>
+                    <div class="submenu">
+                        <a href="#" onclick="showForm('https://drive.google.com/file/d/10zVcqUjVzyYQPSUfMeICmYIexgMoMKPB/view')">Building for Diasporans</a>
+                        <a href="#" onclick="showForm('https://drive.google.com/file/d/1MtLYWOWUKYoqeOvzKqGJ84aeNyRdQa0B/view?usp=drivesdk')">Hospitality Space</a>
+                        <a href="#">Rich Soul Challenge</a>
+                    </div>
+                </li>
+                <li class="menu-item">
+                    <a href="">CONNECT 
+                        
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="contacts">
+            <div class="social">
+                <a href="https://www.instagram.com/epignotects_ad" target="_blank"><i class="fab fa-instagram"></i></a>
+                                  <a href="https://www.facebook.com/epignotects" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="https://www.linkedin.com/epignotects-ad" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#pinterest"><i class="fa-brands fa-pinterest"></i></a>
+                                <a href="#houzz"><i class="fa-brands fa-houzz"></i></a>
+            </div>
+            <div class="contact">+233 20 777 2556</div>
+            <div class="copyright">© Crafted Habitat.<br>All rights reserved.</div>
+        </div>
+    </div>
+   <!-- floating icon -->
+   <div class="floating-button-container">
+       <div class="floating-button"><i class="fa-regular fa-message"></i></div>
+       <div class="contact-icons">
+           <a href="https://wa.me/1234567890" target="_blank" class="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+           <a href="mailto:info@craftdhabitat.com" class="email"><i class="fa-solid fa-envelope icon"></i></a>
+       </div>
+   </div>
+  
+   <main class="main-content">
+    <div class="resources">
+        <article>
+            <div>
+                <h1 class="intro-text">
+                    RESOURCES
+                </h1>
+            </div>
+            <div class="container">
+                <div class="resource-grid">
+                    <div class="resource-item">
+                        <img src="/assets/img/resources/customDreamHome.jpg" alt="Resource 1">
+                        <h2>Your custom dream home building guide</h2>
+                        <p>This guide puts together all the necessary information that you would require for creating a successful stress-free custom dream home in Ghana. From how you prepare to the final building completion and move in</p>
+                        <a href="#" class="read-more-btn" data-image="/assets/img/resources/customDreamHome.Preview.jpeg" data-pdf="/assets/files/pdfs/YourCustomDreamHomeBuildingGuide.pdf">Download</a>
+                    </div>
+                    <div class="resource-item">
+                        <img src="/assets/img/resources/designHotelResort.png" alt="Resource 2">
+                        <h2>Steps in planning and designing your hotel resort</h2>
+                        <p>Planning and designing a Hotel Resort should be a really exciting and a rewarding investment for any one to embark upon in the tropics. This guide will help you to plan and build your resort</p>
+                        <a href="#" class="read-more-btn" data-image="/assets/img/resources/designHotelResort.png" data-pdf="/assets/files/pdfs/StartingYourHotelResort.pdf">Download</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <!-- Form Section -->
+    <div class="form-section" id="downloadSection">
+        <img src="" alt="Book Preview" id="bookPreviewImage">
+        <div>
+            <h2>Enter your details to download the book</h2>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <button id="downloadButton">Download</button>
+        </div>
+    </div>
+</main>
+
+
+
+
+    <script type="text/javascript" src="../assets/lib/_jquery/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="assets/vendors/swiper/swiper.jquery.js"></script>
+    <script type="text/javascript" src="assets/lib/swiper-element-bundle.min.js"></script> -->
+    <script src="assets/js/main.js"></script>
+    
+    <script>
+        // Get elements
+        const formSection = document.getElementById('downloadSection');
+        const readMoreButtons = document.querySelectorAll('.read-more-btn');
+        const bookPreviewImage = document.getElementById('bookPreviewImage');
+        let pdfUrl = '';
+    
+        // Show form section when Read More button is clicked
+        readMoreButtons.forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                const imageSrc = button.getAttribute('data-image');
+                pdfUrl = button.getAttribute('data-pdf');
+                bookPreviewImage.src = imageSrc;
+                formSection.classList.add('visible');
+                formSection.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    
+        // Handle Download Button click
+        document.getElementById('downloadButton').addEventListener('click', function() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            
+            if (name && email) {
+                // Trigger the PDF download
+                const link = document.createElement('a');
+                link.href = pdfUrl;
+                link.download = 'ebook.pdf';
+                link.click();
+    
+                // Optional: Display a success message
+                alert(`Thank you ${name}, the book has been downloaded!`);
+            } else {
+                alert('Please enter your name and email.');
+            }
+        });
+    </script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+        
+            // Hamburger menu functionality
+            const hamburger = document.getElementById('hamburger');
+            const sidebar = document.getElementById('sidebar');
+            const menuItems = document.querySelectorAll('.menu-item');
+
+            hamburger.addEventListener('click', () => {
+                sidebar.classList.toggle('active');
+            });
+
+            menuItems.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        item.classList.toggle('active');
+                    }
+                });
+            });
+
+
+
+        });
+    </script>
+</body>
+</html>
