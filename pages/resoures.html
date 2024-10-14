@@ -260,6 +260,54 @@
             <button id="downloadButton">Download</button>
         </div>
     </div>
+    <footer>
+        <section class="contact-section">
+                <div class="contact-container">
+                    <h1>‘Ready to elevate your space</h1>
+                    <h2>Let’s craft a sanctuary that reflects your unique lifestyle</h2>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone icon"></i>
+                            <span>+233 20 777 2556</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-envelope icon"></i>
+                            <span>info@craftdhabitat.com</span>
+                        </div>
+                    </div>
+                    <form>
+                        <div class="input-row">
+                            <input type="text" placeholder="Name" required>
+                            <input type="email" placeholder="Email address" required>
+                        </div>
+                        <textarea placeholder="Please tell us a few details about your project..." required></textarea>
+                        <button class="contact-btn" type="submit">SUBMIT</button>
+                    </form>
+                </div>
+                <div class="footer-qoute-1">
+                    <q>Crafted spaces for visionary leaders - Designed to nurture clarity, creativity, and impactful decisions.</q>
+        
+                </div>
+                    <!-- Footer positioned at the bottom -->
+                <div class="footer-container">
+                    <div class="social">
+                        <a href="https://www.instagram.com/epignotects_ad" target="_blank"><i class="fab fa-instagram"></i></a>
+                          <a href="https://www.facebook.com/epignotects" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.linkedin.com/epignotects-ad" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#pinterest"><i class="fa-brands fa-pinterest"></i></a>
+                        <a href="#houzz"><i class="fa-brands fa-houzz"></i></a>
+                    </div>
+                    <div class="contact-number">+233 20 777 2556</div>
+                    <div class="copyright">© Crafted Habitat.<br>All rights reserved.</div>
+                </div>
+                <div class="footer-qoute-1">
+                    <q>We design sanctuaries for soul, mind, and body—where you can make high-level decisions and experience holistic well-being.
+        
+                </div>
+            </div>
+        </section>
+    </footer>
 </main>
 
 
@@ -310,31 +358,5 @@
     </script>
 
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-
-        
-            // Hamburger menu functionality
-            const hamburger = document.getElementById('hamburger');
-            const sidebar = document.getElementById('sidebar');
-            const menuItems = document.querySelectorAll('.menu-item');
-
-            hamburger.addEventListener('click', () => {
-                sidebar.classList.toggle('active');
-            });
-
-            menuItems.forEach(item => {
-                item.addEventListener('click', (e) => {
-                    if (window.innerWidth <= 768) {
-                        e.preventDefault();
-                        item.classList.toggle('active');
-                    }
-                });
-            });
-
-
-
-        });
-    </script>
 </body>
 </html>

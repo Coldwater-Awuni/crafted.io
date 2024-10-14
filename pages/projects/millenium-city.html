@@ -88,7 +88,7 @@
        </div>
    </div>
    <main class="main-content">
-    <div class="head-intro projects-content" style="background-image: url('../../assets/img/projects/millenium-city/MilFR.jpg'); ">
+    <div class="head-intro projects-content" style="background-image: url('../../assets/img/projects/millenium-city/Picture20.jpg'); background-size: contain; background-repeat: no-repeat;">
         
     </div>
        <div class="our-projects works">       
@@ -139,6 +139,13 @@
                 <!-- <p>The  Millenium City project showcases our commitment to blending modern design with local cultural elements. This luxurious residential property features spacious living areas, state-of-the-art amenities, and sustainable building practices.</p> -->
                 
                 </section>
+
+                <section class="gallery">
+                    <div class="gallery-item">
+                        <img src="../../assets/img/projects/millenium-city/Milplan1.jpg" alt="Living Room">
+                        <p>Plan</p>
+                    </div>
+                </section>
                 <div class="project-sections">
                     <section class="project-image-text column-left " >
                         <div class="project-section-text  ">
@@ -182,28 +189,30 @@
                             </div>
                         </div>
                         <div class="project-section-image">
-                            <img  class="img-3 column-left project-image"
-                            src="../../assets/img/projects/millenium-city/Milplan1.jpg" alt="Exterior" 
-                            loading="lazy" decoding="async">
+                            
                             <img  class="img-01 column-left project-image"
                             src="../../assets/img/projects/millenium-city/Picture20.jpg" alt="Exterior" 
                             loading="lazy" decoding="async">
                             <img  class="img-02 column-left project-image"
                             src="../../assets/img/projects/millenium-city/Picture7.jpg" alt="Exterior" 
                             loading="lazy" decoding="async">
-                            <!-- <img  class="img-3 column-left project-image"
+                            <img  class="img-3 column-left project-image"
                             src="../../assets/img/projects/millenium-city/Milrooftop.jpg" alt="Exterior" 
-                            loading="lazy" decoding="async"> -->
+                            loading="lazy" decoding="async">
                         
                             
                         </div>
                     </section>
                     <section class="gallery">
-                        <div class="gallery-item">
+                        <!-- <div class="gallery-item">
                             <img src="../../assets/img/projects/millenium-city/Milrooftop.jpg" alt="Living Room">
                             <p>Rooftop</p>
+                        </div> -->
+                        <div class="gallery-item">
+                            <img src="../../assets/img/projects/millenium-city/MilFR.jpg" alt="Living Room">
+                            <p>Front View</p>
                         </div>
-                        </section>
+                    </section>
                 </div>
 
          
@@ -214,7 +223,7 @@
     
            
        </div>
-       
+   
    </main>
 
 
@@ -223,32 +232,7 @@
     <script type="text/javascript" src="../assets/lib/_jquery/jquery.min.js"></script>
     <script type="text/javascript" src="assets/vendors/swiper/swiper.jquery.js"></script>
     <script type="text/javascript" src="assets/lib/swiper-element-bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-
-        
-            // Hamburger menu functionality
-            const hamburger = document.getElementById('hamburger');
-            const sidebar = document.getElementById('sidebar');
-            const menuItems = document.querySelectorAll('.menu-item');
-
-            hamburger.addEventListener('click', () => {
-                sidebar.classList.toggle('active');
-            });
-
-            menuItems.forEach(item => {
-                item.addEventListener('click', (e) => {
-                    if (window.innerWidth <= 768) {
-                        e.preventDefault();
-                        item.classList.toggle('active');
-                    }
-                });
-            });
-
-
-
-        });
-    </script>
+    <script src="/assets/js/main.js"></script>
+  
 </body>
 </html>

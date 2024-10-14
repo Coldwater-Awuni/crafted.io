@@ -88,8 +88,15 @@
        </div>
    </div>
    <main class="main-content">
-    <div class="head-intro projects-content" style="background-image: url('../../assets/img/projects/toyota/Toyota-Ghana-Accra.png'); ">
-        
+    <div class="head-intro projects-content" >
+        <!-- add video background -->
+        <div class="vid-background">
+
+            <video autoplay loop playsinline>
+             <source src="../../assets/img/projects/toyota/ToyotaGH.MP4">
+            </video>
+            
+        </div>
     </div>
        <div class="our-projects works">       
            <article>
@@ -118,19 +125,20 @@
                     </div>
                 </article>
                 <aside class="project-infomation-content-aside"> 
-                    
-                    <p>
+                    <div class="existing-project">
+                        <h3>Existing Project</h3>
+                        <div class="project-img">
+                            <img src="../../assets/img/projects/toyota/Existingtoyotaaccra2.jpg" alt="">
+                        </div>
+                    </div>
+                    <p style="display: none;">
                         <strong>Date begun:</strong> <br> 2019
                         <br>
                         <br>
                          <strong>Completion date</strong> <br> Ongoing
                         <br>
                         <br>
-                        <!-- <strong>Floor area </strong> <br> 340.69m²
-                        <br>
-                        <br> -->
-                        <!-- <strong>Status</strong> <br> Construction stage 
-                        <br> -->
+                      
                         <br>
                         <strong>Location</strong> <br> Accra-Ghana
                     </p>
@@ -148,7 +156,7 @@
                             <div class="sticky-text">
 
                            
-                            <h2> Proposed Contemporary Remodel</h2>
+                            <h2> Toyota Ghana Ltd: <br> Proposed Contemporary Remodel</h2>
                               
                             <p>
                            
@@ -205,37 +213,12 @@
    </main>
 
 
-
+   
 
     <script type="text/javascript" src="../assets/lib/_jquery/jquery.min.js"></script>
     <script type="text/javascript" src="assets/vendors/swiper/swiper.jquery.js"></script>
     <script type="text/javascript" src="assets/lib/swiper-element-bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-
-        
-            // Hamburger menu functionality
-            const hamburger = document.getElementById('hamburger');
-            const sidebar = document.getElementById('sidebar');
-            const menuItems = document.querySelectorAll('.menu-item');
-
-            hamburger.addEventListener('click', () => {
-                sidebar.classList.toggle('active');
-            });
-
-            menuItems.forEach(item => {
-                item.addEventListener('click', (e) => {
-                    if (window.innerWidth <= 768) {
-                        e.preventDefault();
-                        item.classList.toggle('active');
-                    }
-                });
-            });
-
-
-
-        });
-    </script>
+    <script src="/assets/js/main.js"></script>
+   
 </body>
 </html>

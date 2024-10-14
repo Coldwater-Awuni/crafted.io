@@ -89,8 +89,15 @@
    </div>
    <main class="main-content">
     <div class="our-projects">       
-        <div class="head-intro projects-content" style="background-image: url('../../assets/img/projects/Guyana-house/LivingRoom.JPG'); ">
-        
+        <div class="head-intro projects-content" >
+            <!-- add video background -->
+            <div class="vid-background">
+    
+                <video autoplay loop playsinline>
+                 <source src="../../assets/img/projects/Guyana-house/main.mp4">
+                </video>
+                
+            </div>
         </div>
            <div class="our-projects works">       
                <article>
@@ -113,7 +120,7 @@
                     <aside class="project-infomation-content-aside"> 
                         
                         <p>
-                            <strong>Date begun:</strong> <br> 2020
+                            <strong>Date begun:</strong> <br> 2024
                             <br>
                             <br>
                              <strong>Completion date</strong> <br> Ongoing
@@ -125,7 +132,7 @@
                             <strong>Status</strong> <br> Construction stage 
                             <br>
                             <br>
-                            <strong>Location</strong> <br>Weija, Accra-Ghana
+                            <strong>Location</strong> <br>Georgetown in Guyana - South America
                         </p>
                    
                     
@@ -165,31 +172,25 @@
                                 <img  class="img-01 column-left project-image"
                                 src="../../assets/img/projects/Guyana-house/Staircase.JPG" alt="Exterior" 
                                 loading="lazy" decoding="async">
-                                <!-- <img  class="img-02 column-left project-image"
-                                src="../../assets/img/projects/weija-villa/waija-villa-concept.jpg" alt="Exterior" 
-                                loading="lazy" decoding="async"> -->
-                                <!-- <img  class="img-5 column-left project-image"
-                                src="../../assets/img/projects/weija-villa/waija-villa-concept2.jpg" alt="Exterior" 
-                                loading="lazy" decoding="async">
-                                <img  class="img-3 column-left project-image"
-                                src="../../assets/img/projects/weija-villa/waija-villa-1.jpg" alt="Exterior" 
-                                loading="lazy" decoding="async">
-                                <img  class="img-4 column-left project-image"
-                                src="../../assets/img/projects/weija-villa/waija-villa-2.jpg" alt="Exterior" 
-                                loading="lazy" decoding="async">
-                                <img  class="img-4 column-left project-image"
-                                src="../../assets/img/projects/weija-villa/waija-villa-fullView3.jpg" alt="Exterior" 
-                                loading="lazy" decoding="async"> -->
+                              
                                 
                             </div>
                            
                         </section>
                         <section class="gallery">
                             <div class="gallery-item">
+                                <img src="../../assets/img/projects/Guyana-house/viewFromThe back.jpg" alt="Living Room">
+                                <p>view From The back</p>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../../assets/img/projects/Guyana-house/dinning.jpg" alt="Living Room">
+                                <p>Dinning Room</p>
+                            </div>
+                            <div class="gallery-item">
                                 <img src="../../assets/img/projects/Guyana-house/Kitchen.JPG" alt="Living Room">
                                 <p>A Mordern kitchen</p>
                             </div>
-                            </section>
+                        </section>
                     </div>
     
              
@@ -210,7 +211,7 @@
            
        </div>
        
-       
+
    </main>
 
 
@@ -219,32 +220,7 @@
     <script type="text/javascript" src="../assets/lib/_jquery/jquery.min.js"></script>
     <script type="text/javascript" src="assets/vendors/swiper/swiper.jquery.js"></script>
     <script type="text/javascript" src="assets/lib/swiper-element-bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-
-        
-            // Hamburger menu functionality
-            const hamburger = document.getElementById('hamburger');
-            const sidebar = document.getElementById('sidebar');
-            const menuItems = document.querySelectorAll('.menu-item');
-
-            hamburger.addEventListener('click', () => {
-                sidebar.classList.toggle('active');
-            });
-
-            menuItems.forEach(item => {
-                item.addEventListener('click', (e) => {
-                    if (window.innerWidth <= 768) {
-                        e.preventDefault();
-                        item.classList.toggle('active');
-                    }
-                });
-            });
-
-
-
-        });
-    </script>
+    <script src="/assets/js/main.js"></script>
+  
 </body>
 </html>

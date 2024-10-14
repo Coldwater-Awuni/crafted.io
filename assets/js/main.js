@@ -2,7 +2,7 @@
 
 // Function to load the newsteller popup 5 seconds after page load
 window.onload = function() {
-    setTimeout(loadPopup, 5000); // Delay of 5 seconds
+    setTimeout(loadPopup, 10000); // Delay of 5 seconds
 };
 
 // Function to fetch and display the popup from newsletter-popup.html
@@ -47,7 +47,40 @@ function closePopup() {
 }
 
 
-// navbar 
+// nav
+
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger');
+    const sidebar = document.getElementById('sidebar');
+    const menuItems = document.querySelectorAll('.menu-item');
+
+    hamburger.addEventListener('click', function() {
+        sidebar.classList.toggle('active');
+    });
+
+    menuItems.forEach(item => {
+        const link = item.querySelector('a');
+        const submenu = item.querySelector('.submenu');
+
+        if (submenu) {
+            link.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    item.classList.toggle('active');
+                }
+            });
+        }
+    });
+
+    // Close sidebar when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!sidebar.contains(e.target) && e.target !== hamburger) {
+            sidebar.classList.remove('active');
+        }
+    });
+});
+
+
 // Select all menu items that have submenus
 const menuItems = document.querySelectorAll('.menu-item.has-submenu > a');
 
@@ -67,6 +100,10 @@ menuItems.forEach(item => {
         });
     });
 });
+
+
+
+
 
 // function toggleNav() {
 //     var sidenav = document.getElementById("mySidenav");

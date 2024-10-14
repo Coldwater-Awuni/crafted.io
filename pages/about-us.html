@@ -95,20 +95,20 @@
         <main class="main-content">
             <div class="content">
                 <div class="head-intro" style="background-image: url('../assets/img/about/about_1.jpg');">
-                    
-                </div>
-                <article class="about-article">
                     <div class="">
                         <h1 class="intro-text">
                             ABOUT US
                         </h1>
                     </div>
+                </div>
+                <article class="about-article">
+                    
                     <section id="who-we-are">
                         <div class="body-text">                              
                             <p>
                                 <div class="who-we-are-intro">
                                 <strong class="body-text-title" style="text-transform: capitalize;"> Who we are</strong> 
-                               <br>
+                               <br><br>
                                Welcome to  <strong>CRAFT’D HABITAT</strong>  Architecture, where we believe in the  
                                transformative power of architecture to enrich the soul and elevate the human experience. 
                                Formerly known as Epignotects Architecture Ltd, we have rebranded to better reflect our commitment to creating spaces that nurture holistic wellbeing and inspire personal growth.
@@ -146,7 +146,7 @@
                     <div class="body-media">
                         <figure>
                             <picture>
-                                <img src="../assets/img/about/service_4.jpg" alt="">
+                                <img src="../assets/img/about/whoweare2.jpg" alt="">
                             </picture>
                         </figure>
                     </div>
@@ -173,7 +173,7 @@
                     <div class="body-media">
                         <figure>
                             <picture>
-                                <img src="../assets/img/about/service_4.jpg" alt="">
+                                <img src="../assets/img/about/ourDifference.jpg" alt="">
                             </picture>
                         </figure>
                     </div>
@@ -269,7 +269,7 @@
     <script type="text/javascript" src="../assets/lib/_jquery/jquery.min.js"></script>
     <script type="text/javascript" src="assets/vendors/swiper/swiper.jquery.js"></script>
     <script type="text/javascript" src="assets/lib/swiper-element-bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="/assets/js/main.js"></script>
     
      <script>
             let currentUrl = '';
@@ -316,31 +316,6 @@
             }
         });
    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-
-        
-            // Hamburger menu functionality
-            const hamburger = document.getElementById('hamburger');
-            const sidebar = document.getElementById('sidebar');
-            const menuItems = document.querySelectorAll('.menu-item');
-
-            hamburger.addEventListener('click', () => {
-                sidebar.classList.toggle('active');
-            });
-
-            menuItems.forEach(item => {
-                item.addEventListener('click', (e) => {
-                    if (window.innerWidth <= 768) {
-                        e.preventDefault();
-                        item.classList.toggle('active');
-                    }
-                });
-            });
-
-
-
-        });
-    </script>
+  
 </body>
 </html>

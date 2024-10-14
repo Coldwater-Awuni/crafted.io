@@ -19,23 +19,25 @@
 </head>
 
 <style>
-      h1 {
+      /* h1 {
         font-size: 2.5em;
         margin-bottom: 20px;
         text-align: center;
     }
-
+  */
     .container {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 20px;
+        max-width: 1000px;
+        margin: 5px auto;
     }
 
     .map-container {
         flex: 1;
-        /* min-width: 300px; */
-        padding-left: 20px;
+        max-width: 49%;
+        /* padding-left: 20px; */
     }
 
     .map-container iframe {
@@ -68,32 +70,44 @@
 
     .row {
         display: flex;
-        justify-content: space-between;
+        /* justify-content:space-around; */
         gap: 20px;
     }
 
     .column {
         flex: 1;
+    } 
+    .contacts .social a li{
+        font-size: 1.5rem;
     }
+
 /* General Container */
 .appointment-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
     margin: 60px auto;
     padding: 30px;
-    max-width: 600px;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    /* max-width: 600px; */
+   
 }
 
 /* Heading Style */
-.appointment-container h2 {
+.appointment h2 {
     font-size: 2em;
     font-weight: 600;
     text-align: center;
     color: #333;
     margin-bottom: 30px;
+    flex: 0;
 }
 
+.appointment-form-container{
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
 /* Form Container */
 .appointment-form {
     display: grid;
@@ -167,8 +181,12 @@
 
 
     @media (max-width: 768px) {
+        .appointment-container {
+            flex-direction: column-reverse;
+        }
         .container {
             flex-direction: column;
+            
         }
 
         .map-container {
@@ -177,6 +195,7 @@
 
         .row {
             flex-direction: column;
+          
         }
     }
 
@@ -205,9 +224,9 @@
         </div>
         <nav>
             <ul class="menu">
-                <li class="menu-item"><a href="../../index.html">HOME</a></li>
+                <li class="menu-item"><a href="../index.html">HOME</a></li>
                 <li class="menu-item">
-                    <a href="../../pages/about-us.html">ABOUT US <i class="fa-solid fa-angle-right"></i></a>
+                    <a href="../pages/about-us.html">ABOUT US <i class="fa-solid fa-angle-right"></i></a>
                     <div class="submenu">
                         <a href="../../pages/about-us.html#who-we-are">Who We Are</a>
                         <a href="../../pages/about/journey.html">Our Journey</a>
@@ -268,101 +287,152 @@
    <main class="main-content">
        <div class="connect">       
            <article>
-
-               <div class="">
-                   <h1 class="intro-text">
-                      Connect with us
-                   </h1>
-               </div>
-
             
-               <section class="connct-with-us">
-                <div class="container">
-                    <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15882.87557578724!2d-0.255682!3d5.608473!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9936719e5263%3A0xde2e46c65ed77253!2sepignotects%20Architecture%20%26%20Development!5e0!3m2!1sen!2sus!4v1728441786430!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="head-intro" style="background-image: url('../../assets/img/about/about_1.jpg'); height: 70vh;">
+                    <div class="">
+                        <h1 class="intro-text">
+                             Connect with us
+                        </h1>
                     </div>
-                    <div class="info-container">
-                        <div class="info-section">
-                            <h2>Accra Ghana</h2>
-                        </div>
-                        <div class="row">
-                            <div class="column">
-                                <div class="info-section">
-                                    <h2>Press Inquiries</h2>
-                                    <p>office@craftdhabitat.com</p>
-                                </div>
-                                <div class="info-section">
-                                    <h2>General Information</h2>
-                                    <p>info@craftdhabitat.com</p>
-                                </div>
-                                <div class="info-section">
-                                    <h2>Visiting Address</h2>
-                                    <p>N03 Flower Street</p>
-                                    <p>Kwashibu, Accra</p>
-                                    <p>Ghana</p>
-                                </div>
-                            </div>
-                            <div class="column">
-                                <div class="info-section">
-                                    <h2>Post Address</h2>
-                                    <p> P.O.Box AN 7849</p>
-                                    <p> N0 4 West Mccarthy Hill</p>
-                                    <p>Accra - North </p>
-                                </div>
-                               
-
-                                <div class="info-section">
-                                    <h2>Contact Numbers</h2>
-                                    <p>+233 20 777 2556</p>
-                                    <p>+233 20 777 2556</p>
-                                </div>
-                            </div>
-                            
-                           
-                        </div>
-                       
-
-                        <!-- <div class="row">
-                            <div class="column">
-                               
-                            </div>
-                           
-                        </div> -->
-                    </div>
+            </div>
+              
+            <section class="connect-text">
+                <div class="connect-text-content">
+                    <p>Schedule a <span>FREE CONSULTATION CALL</span> with us!</p>
+                    <p>take the first step towards making your dream home a reality, today !</p>
+                    <p>Talk to an experienced  architect about your design and then 
+                        building project and seek advice on the feasibility of 
+                        your remodel, or new home, corperate , or commercial project .
+                    </p>
+                
                 </div>
 
-               
             </section>
 
+            <section class="text-image">
+                <div class="text-image-content">
+                    <div class="text-content">
+                        <h2>Clarity Call</h2>
+                        
+                        <h4>30 minutes</h4>
+                        <br>
+                        <p>
+                            Speak personally with Architect Helena Fordjour to discuss your 
+                            project goals and needs.If at the end of our chat, 
+                            we think I can help you with more specific advice and 
+                            design solutions, we can schedule a meeting at your 
+                            site.
+ 
+                        </p>
+                    </div>
+                    <div class="img-content">
+                        <img src="../assets/img/other/call-contact.jpg" alt="">
+                    </div>
+                </div>
+            </section>
+
+               <section class="connct-with-us" >
+                    <div class="container">
+                       
+                        <div class="info-container">
+                            <!-- <div class="info-section">
+                                <h2>Accra Ghana</h2>
+                            </div> -->
+                            <div class="column">
+                                <div class="row">
+                                    <div class="column">
+                                        <div class="info-section">
+                                            <h2>Press Inquiries</h2>
+                                            <p>office@craftdhabitat.com</p>
+                                        </div>
+                                        <div class="info-section">
+                                            <h2>General Information</h2>
+                                            <p>info@craftdhabitat.com</p>
+                                        </div>
+                                        <div class="info-section">
+                                            <h2>Visiting Address</h2>
+                                            <p>N03 Flower Street</p>
+                                            <p>Kwashibu, Accra</p>
+                                            <p>Ghana</p>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="info-section">
+                                            <h2>Post Address</h2>
+                                            <p> P.O.Box AN 7849</p>
+                                            <p> N0 4 West Mccarthy Hill</p>
+                                            <p>Accra - North </p>
+                                        </div>
+                                    
+
+                                        <div class="info-section">
+                                            <h2>Contact Numbers</h2>
+                                            <p>+233 20 777 2556</p>
+                                            <p>+233 24 416 9902</p>
+                                        </div>
+                                        <div class="info-section">
+                                            <div class="socials">
+                                                <!-- <h2> Socials</h2> -->
+                                               
+                                                <a href="https://www.instagram.com/epignotects_ad" target="_blank"><i class="fab fa-instagram"></i></a>
+                                                <a href="https://www.facebook.com/epignotects" target="_blank"><i class="fab fa-facebook-f"></i> </a>
+                                                <a href="#twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                                                <a href="https://www.linkedin.com/epignotects-ad" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                                <a href="#pinterest"><i class="fa-brands fa-pinterest"></i></a>
+                                                <a href="#houzz"><i class="fa-brands fa-houzz"></i></a>
+                                            </div>   
+                                        </div>
+                                    </div>
+                                    
+                                
+                                </div>
+                                
+                                                                   
+                                
+                            </div>
+
+                            
+                        </div>
+                        
+                    </div>             
+              </section>
+
                 <!-- Book Appointment Section -->
-                <section class="appointment-container">
+                <section class="appointment">
                     <h2>Book an Appointment</h2>
-                    <form class="appointment-form" action="/submit-appointment" method="POST">
-                        <div class="row">
-                            <div class="column">
-                                <label for="name">Full Name</label>
-                                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-                            </div>
+                    <div class="appointment-container">
+                        <div class="map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15882.87557578724!2d-0.255682!3d5.608473!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9936719e5263%3A0xde2e46c65ed77253!2sepignotects%20Architecture%20%26%20Development!5e0!3m2!1sen!2sus!4v1728441786430!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
-                
-                        <div class="row">
-                            <div class="column">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                            </div>
-                            <div class="column">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
-                            </div>
-                        </div>               
-                        <div class="row">
-                            <label for="appointment-date">Select Date and Time</label>
-                            <input type="datetime-local" id="appointment-date" name="appointment-date" required>
+                        <div class="appointment-form-Container">
+                            <form class="appointment-form" action="/submit-appointment" method="POST">
+                                <div class="row">
+                                    <div class="column">
+                                        <label for="name">Full Name</label>
+                                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                                    </div>
+                                </div>
+                        
+                                <div class="row">
+                                    <div class="column">
+                                        <label for="email">Email</label>
+                                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                                    </div>
+                                    <div class="column">
+                                        <label for="phone">Phone Number</label>
+                                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                                    </div>
+                                </div>               
+                                <div class="row">
+                                    <label for="appointment-date">Select Date and Time</label>
+                                    <input type="datetime-local" id="appointment-date" name="appointment-date" required>
+                                </div>
+                                <div class="row">
+                                    <input type="submit" value="Book Appointment">
+                                </div>
+                            </form>
                         </div>
-                        <div class="row">
-                            <input type="submit" value="Book Appointment">
-                        </div>
-                    </form>
+                    </div>
                 </section>
                 
            </article>
@@ -379,33 +449,8 @@
     <script type="text/javascript" src="../assets/lib/_jquery/jquery.min.js"></script>
     <script type="text/javascript" src="assets/vendors/swiper/swiper.jquery.js"></script>
     <script type="text/javascript" src="assets/lib/swiper-element-bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
+    <script src="/assets/js/main.js"></script>
 
-        
-            // Hamburger menu functionality
-            const hamburger = document.getElementById('hamburger');
-            const sidebar = document.getElementById('sidebar');
-            const menuItems = document.querySelectorAll('.menu-item');
-
-            hamburger.addEventListener('click', () => {
-                sidebar.classList.toggle('active');
-            });
-
-            menuItems.forEach(item => {
-                item.addEventListener('click', (e) => {
-                    if (window.innerWidth <= 768) {
-                        e.preventDefault();
-                        item.classList.toggle('active');
-                    }
-                });
-            });
-
-
-
-        });
-    </script>
 </body>
 
 
