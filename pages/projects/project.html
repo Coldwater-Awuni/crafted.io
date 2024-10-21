@@ -24,7 +24,9 @@
     <!-- sidebar navigation -->
     <div class="sidebar" id="sidebar">
         <div class="logo">
+            <a href="../../index.html">
             <img src="../../assets/svg/crafted_habitat.svg" alt="Crafted Habitat">
+            </a>
         </div>
         <nav>
             <ul class="menu">
@@ -52,12 +54,12 @@
                     </div>
                 </li>
                 <li class="menu-item">
-                    <a href="/pages/resoures.html">RESOURCES <i class="fa-solid fa-angle-right"></i></a>
-                    <div class="submenu">
+                    <a href="/pages/resoures.html">RESOURCES </a>
+                    <!-- <div class="submenu">
                         <a href="/pages/resoures.html#resourceBooks" >Building for Diasporans</a>
                         <a href="/pages/resoures.html#resourceBooks" >Hospitality Space</a>
                         <a href="#">Rich Soul Challenge</a>
-                    </div>
+                    </div> -->
                 </li>
                 <li class="menu-item">
                     <a href="/pages/connect.html">CONNECT 
@@ -76,14 +78,14 @@
                                 <a href="#houzz"><i class="fa-brands fa-houzz"></i></a>
             </div>
             <div class="contact">+233 20 777 2556</div>
-            <div class="copyright">© Crafted Habitat.<br>All rights reserved.</div>
+            <div class="copyright">© Craft'd Habitat.<br>All rights reserved.</div>
         </div>
     </div>
    <!-- floating icon -->
    <div class="floating-button-container">
        <div class="floating-button"><i class="fa-regular fa-message"></i></div>
        <div class="contact-icons">
-           <a href="https://wa.me/1234567890" target="_blank" class="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+           <a href="https://wa.me/0207772556" target="_blank" class="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
            <a href="mailto:info@craftdhabitat.com" class="email"><i class="fa-solid fa-envelope icon"></i></a>
        </div>
    </div>
@@ -226,6 +228,19 @@
                     </a>
                 </div>
             </div>
+            <div class="list-item list-item--tall">
+                <div class="list-item__hover">
+                    <a href="./toyota-showroom.html">
+                        <div class="list-item__figure">
+                            <img src="../../assets/img/projects/toyota-showroom-accra/FrontDisplay.jpg" alt="Guyana House" loading="lazy" decoding="async">
+                        </div>
+                        <div class="list-item__content">
+                            <h2 class="list-item__title">Toyota Showroom</h2>
+                            <p class="list-item__subtitle"> Accra,Ghana 2024</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
             <div class="list-item ">
                 <div class="list-item__hover">
                     <a href="n1-street.html">
@@ -264,13 +279,13 @@
                             <span>info@craftdhabitat.com</span>
                         </div>
                     </div>
-                    <form>
+                    <form id="contact-form">
                         <div class="input-row">
-                            <input type="text" placeholder="Name" required>
-                            <input type="email" placeholder="Email address" required>
+                            <input id="customer-name" type="text" placeholder="Name" required>
+                            <input id="customer-email" type="email" placeholder="Email address" required>
                         </div>
-                        <textarea placeholder="Please tell us a few details about your project..." required></textarea>
-                        <button class="contact-btn" type="submit">SUBMIT</button>
+                        <textarea id="customer-msg" placeholder="Please tell us a few details about your project..." required></textarea>
+                        <button id="contact-submit" class="contact-btn" type="submit">SUBMIT</button>
                     </form>
                 </div>
                 <div class="footer-qoute-1">
@@ -288,7 +303,7 @@
                         <a href="#houzz"><i class="fa-brands fa-houzz"></i></a>
                     </div>
                     <div class="contact-number">+233 20 777 2556</div>
-                    <div class="copyright">© Crafted Habitat.<br>All rights reserved.</div>
+                    <div class="copyright">© Craft'd Habitat.<br>All rights reserved.</div>
                 </div>
                 <div class="footer-qoute-1">
                     <q>We design sanctuaries for soul, mind, and body—where you can make high-level decisions and experience holistic well-being.
@@ -302,10 +317,27 @@
 
 
 
-    <script type="text/javascript" src="../assets/lib/_jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/vendors/swiper/swiper.jquery.js"></script>
-    <script type="text/javascript" src="assets/lib/swiper-element-bundle.min.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script type="text/javascript" src="../../assets/lib/_jquery/jquery.min.js"></script>
+  
+    <script src="../../assets/js/main.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+    <script src="../../backend/firebaseconfig.js"></script>
+    <script src="../../backend/newsletter.js"></script>
+    <script src="../../backend/contact.js" ></script>
+    <!-- <script src="email.js"></script> -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "9p4pisi8bACC9YVO1",
+            });
+        })();
+    </script>
+    <script src="../../backend/contact.js"></script>
+   
    
 </body>
 </html>

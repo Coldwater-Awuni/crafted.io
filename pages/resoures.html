@@ -158,44 +158,46 @@
     <!-- sidebar navigation -->
     <div class="sidebar" id="sidebar">
         <div class="logo">
-            <img src="../../assets/svg/crafted_habitat.svg" alt="Crafted Habitat">
+            <a href="../index.html">
+            <img src="../assets/svg/crafted_habitat.svg" alt="Crafted Habitat">
+            </a>
         </div>
         <nav>
             <ul class="menu">
-                <li class="menu-item"><a href="../../index.html">HOME</a></li>
+                <li class="menu-item"><a href="../index.html">HOME</a></li>
                 <li class="menu-item">
-                    <a href="../../pages/about-us.html">ABOUT US <i class="fa-solid fa-angle-right"></i></a>
+                    <a href="../pages/about-us.html">ABOUT US <i class="fa-solid fa-angle-right"></i></a>
                     <div class="submenu">
-                        <a href="../../pages/about-us.html#who-we-are">Who We Are</a>
-                        <a href="../../pages/about/journey.html">Our Journey</a>
-                        <a href="../../pages/about/ourservices.html">Our Services</a>
+                        <a href="../pages/about-us.html#who-we-are">Who We Are</a>
+                        <a href="../pages/about/journey.html">Our Journey</a>
+                        <a href="../pages/about/ourservices.html">Our Services</a>
                       
                     </div>
                 </li>
                 <li class="menu-item">
-                    <a href="../../pages/wellbeing/ourprocess.html" class="">Architecture For Wellbeing</i></a>
+                    <a href="../pages/wellbeing/ourprocess.html" class="">Architecture For Wellbeing</i></a>
                     <!-- <div class="submenu">
                         <a href="#">Our Process</a>
                     </div> -->
                 </li>
                 <li class="menu-item">
-                    <a href="../../pages/projects/project.html">OUR PROJECTS <i class="fa-solid fa-angle-right"></i></a>
+                    <a href="../pages/projects/project.html">OUR PROJECTS <i class="fa-solid fa-angle-right"></i></a>
                     <div class="submenu">
-                        <a href="../../pages/projects/project.html">Past Projects</a>
-                        <a href="../../pages/projects/project.html">Current Projects</a>
+                        <a href="../ages/projects/project.html">Past Projects</a>
+                        <a href="../pages/projects/project.html">Current Projects</a>
                     </div>
                 </li>
                 
                 <li class="menu-item">
-                    <a href="/pages/resoures.html">RESOURCES <i class="fa-solid fa-angle-right"></i></a>
-                    <div class="submenu">
+                    <a href="../pages/resoures.html">RESOURCES </a>
+                    <!-- <div class="submenu">
                         <a href="/pages/resoures.html#resourceBooks" >Building for Diasporans</a>
                         <a href="/pages/resoures.html#resourceBooks" >Hospitality Space</a>
                         <a href="#">Rich Soul Challenge</a>
-                    </div>
+                    </div> -->
                 </li>
                 <li class="menu-item">
-                    <a href="/pages/connect.html">CONNECT 
+                    <a href="../pages/connect.html">CONNECT 
                         
                     </a>
                 </li>
@@ -211,14 +213,16 @@
                                 <a href="#houzz"><i class="fa-brands fa-houzz"></i></a>
             </div>
             <div class="contact">+233 20 777 2556</div>
-            <div class="copyright">© Crafted Habitat.<br>All rights reserved.</div>
+            <div class="copyright">© Craft'd Habitat.<br>All rights reserved.</div>
         </div>
     </div>
+
+
    <!-- floating icon -->
    <div class="floating-button-container">
        <div class="floating-button"><i class="fa-regular fa-message"></i></div>
        <div class="contact-icons">
-           <a href="https://wa.me/1234567890" target="_blank" class="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+           <a href="https://wa.me/0207772556" target="_blank" class="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
            <a href="mailto:info@craftdhabitat.com" class="email"><i class="fa-solid fa-envelope icon"></i></a>
        </div>
    </div>
@@ -235,13 +239,14 @@
                 <div class="resource-grid" id="resourceBooks">
                     <div class="resource-item">
                         <img src="/assets/img/resources/customDreamHome.jpg" alt="Resource 1">
-                        <h2>Your custom dream home building guide</h2>
+                        <h2>Your Custom Dream Home 
+                            Building Guide</h2>
                         <p>This guide puts together all the necessary information that you would require for creating a successful stress-free custom dream home in Ghana. From how you prepare to the final building completion and move in</p>
                         <a href="#" class="read-more-btn" data-image="/assets/img/resources/customDreamHome.Preview.jpeg" data-pdf="/assets/files/pdfs/YourCustomDreamHomeBuildingGuide.pdf">Download</a>
                     </div>
                     <div class="resource-item">
                         <img src="/assets/img/resources/designHotelResort.png" alt="Resource 2">
-                        <h2>Steps in planning and designing your hotel resort</h2>
+                        <h2>Steps In Planning and Designing Your Hotel Resort</h2>
                         <p>Planning and designing a Hotel Resort should be a really exciting and a rewarding investment for any one to embark upon in the tropics. This guide will help you to plan and build your resort</p>
                         <a href="#" class="read-more-btn" data-image="/assets/img/resources/designHotelResort.png" data-pdf="/assets/files/pdfs/StartingYourHotelResort.pdf">Download</a>
                     </div>
@@ -275,13 +280,13 @@
                             <span>info@craftdhabitat.com</span>
                         </div>
                     </div>
-                    <form>
+                    <form id="contact-form">
                         <div class="input-row">
-                            <input type="text" placeholder="Name" required>
-                            <input type="email" placeholder="Email address" required>
+                            <input id="customer-name" type="text" placeholder="Name" required>
+                            <input id="customer-email" type="email" placeholder="Email address" required>
                         </div>
-                        <textarea placeholder="Please tell us a few details about your project..." required></textarea>
-                        <button class="contact-btn" type="submit">SUBMIT</button>
+                        <textarea id="customer-msg" placeholder="Please tell us a few details about your project..." required></textarea>
+                        <button id="contact-submit" class="contact-btn" type="submit">SUBMIT</button>
                     </form>
                 </div>
                 <div class="footer-qoute-1">
@@ -299,7 +304,7 @@
                         <a href="#houzz"><i class="fa-brands fa-houzz"></i></a>
                     </div>
                     <div class="contact-number">+233 20 777 2556</div>
-                    <div class="copyright">© Crafted Habitat.<br>All rights reserved.</div>
+                    <div class="copyright">© Craft'd Habitat.<br>All rights reserved.</div>
                 </div>
                 <div class="footer-qoute-1">
                     <q>We design sanctuaries for soul, mind, and body—where you can make high-level decisions and experience holistic well-being.
@@ -313,11 +318,27 @@
 
 
 
-    <script type="text/javascript" src="../assets/lib/_jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/lib/_jquery/jquery.min.js"></script>
     <!-- <script type="text/javascript" src="assets/vendors/swiper/swiper.jquery.js"></script>
     <script type="text/javascript" src="assets/lib/swiper-element-bundle.min.js"></script> -->
     <script src="assets/js/main.js"></script>
-    
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="../backend/firebaseconfig.js"></script>
+    <script src="../backend/newsletter.js"></script>
+   
+    <!-- <script src="email.js"></script> -->
+   <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "9p4pisi8bACC9YVO1",
+            });
+        })();
+    </script>
+    <script src="../backend/contact.js"></script>
+   
     <script>
         // Get elements
         const formSection = document.getElementById('downloadSection');
@@ -338,25 +359,44 @@
         });
     
         // Handle Download Button click
-        document.getElementById('downloadButton').addEventListener('click', function() {
+        document.getElementById('downloadButton').addEventListener('click', async function() {
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
-            
+
+            function generateDocId() {
+            return name
+                .trim()
+                .replace(/\s+/g, ' ') // Replace multiple spaces with a single space
+                .split(' ') // Split the name into words
+                .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()) // Capitalize each word
+                .join('') // Join them back without spaces
+                + '-' + Date.now().toString();
+                }
+
             if (name && email) {
                 // Trigger the PDF download
                 const link = document.createElement('a');
                 link.href = pdfUrl;
                 link.download = 'ebook.pdf';
                 link.click();
-    
+                const resourceRef = db.collection('ResourceDownload').docid(generateDocId);
+                 try {
+                    await resourceRef.set({
+                        Name: name,
+                        Email: email
+                    });
+                 } catch (error) {
+                    console.error('Error uploading data'+ error);
+                 }
                 // Optional: Display a success message
                 alert(`Thank you ${name}, the book has been downloaded!`);
             } else {
                 alert('Please enter your name and email.');
             }
         });
+    
+    
     </script>
-
 
 </body>
 </html>

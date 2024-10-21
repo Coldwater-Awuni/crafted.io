@@ -12,8 +12,8 @@
             <p>Join our list for exclusive tips on designing spaces that nurture your wellbeing, plus insights on 
                 cultivating prosperity and balance within your soul</p>
             <form id="newsletter-form">
-                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-                <button type="submit">SUBSCRIBE</button>
+                <input type="email" id="newsletter-email" name="email" placeholder="Enter your email address" required>
+               
 
                 <div class="checkbox-container">
                     <input type="checkbox" id="terms" name="terms" required>
@@ -21,6 +21,7 @@
                         I agree to the Privacy Policy and authorize the processing of my personal data for newsletters and promotions.
                     </label>
                 </div>
+                <button id="submit-btn" type="submit">SUBSCRIBE</button>
             </form>
 
             <div id="message" class="message"></div>
@@ -38,7 +39,11 @@
             overflow: hidden;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         }
-
+        @media (max-width:768px) {
+        .popup{
+            max-width: 100%;
+        }            
+        }
         /* Close button styles */
         .close-btn {
             position: fixed;
@@ -130,4 +135,5 @@
             align-items: center;
         }
     </style>
+
 </div>

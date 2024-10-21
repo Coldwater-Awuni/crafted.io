@@ -1,45 +1,35 @@
 
 
-// Function to load the newsteller popup 5 seconds after page load
-window.onload = function() {
-    setTimeout(loadPopup, 10000); // Delay of 5 seconds
-};
 
-// Function to fetch and display the popup from newsletter-popup.html
-function loadPopup() {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', '../../pages/newsteller.html', true);
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            document.getElementById('popup-container').innerHTML = xhr.responseText;
-            document.getElementById('popup-overlay').style.display = 'flex'; // Show the popup overlay
 
-            // Add event listener for the close button
-            document.getElementById('close-btn').addEventListener('click', closePopup);
 
-            // Add event listener for clicking outside the popup to close it
-            document.getElementById('popup-overlay').addEventListener('click', function(e) {
-                if (e.target === this) {
-                    closePopup();
-                }
-            });
+// document.getElementById('mail').addEventListener('click', function () {
+//     // Prepare the email data
+//     const emailData = {
+//         to: 'danielawuni53@gmail.com',
+//         subject: 'Newsletter',
+//         text: "Welcome to the Craft'd Habitat Newsletter",
+//         html: "<p>Welcome to the Craft'd Habitat Newsletter</p>"
+//     };
+//     // re_bTGrrt8v_6jBiKETrihqwAhh3P9QaUibono  ;;;;resend secreat key
+//     // Send the request to the backend server
+//     fetch('http://localhost:3000/send-email', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify(emailData),
+//     })
+//     .then(response => response.text())
+//     .then(result => {
+//         console.log('Email sent:', result);
+//     })
+//     .catch(error => {
+//         console.error('Error sending email:', error);
+//     });
+// });
 
-            // Handle form submission
-            document.getElementById('newsletter-form').addEventListener('submit', function(e) {
-                e.preventDefault(); // Prevent page reload on form submission
 
-                const email = document.getElementById('email').value;
-                const termsAccepted = document.getElementById('terms').checked;
-
-                if (email && termsAccepted) {
-                    alert('Thank you for subscribing!');
-                    closePopup(); // Close the popup after form submission
-                }
-            });
-        }
-    };
-    xhr.send();
-}
 
 // Function to close the popup
 function closePopup() {
@@ -71,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
-
     // Close sidebar when clicking outside
     document.addEventListener('click', function(e) {
         if (!sidebar.contains(e.target) && e.target !== hamburger) {
@@ -104,17 +93,6 @@ menuItems.forEach(item => {
 
 
 
-
-// function toggleNav() {
-//     var sidenav = document.getElementById("mySidenav");
-//     var content = document.querySelector(".content");
-    
-//     if (sidenav.style.right === "0px" || sidenav.style.right === "") {
-//         sidenav.style.right = "-100%";
-//     } else {
-//         sidenav.style.right = "0px";
-//     }
-// }
 
 
 
