@@ -1,5 +1,100 @@
 
 
+document.addEventListener('DOMContentLoaded', function() {
+
+    // Function to set lazy loading attributes if not present
+    function setLazyLoadingForMedia() {
+        const allImages = document.querySelectorAll('img');
+        const allVideos = document.querySelectorAll('video');
+
+        // Loop through all images
+        allImages.forEach(img => {
+            if (!img.classList.contains('lazy')) {
+                img.classList.add('lazy');
+            }
+            if (!img.hasAttribute('data-src')) {
+                img.setAttribute('data-src', img.src);  // Move current src to data-src
+                img.removeAttribute('src');  // Remove the src attribute to prevent immediate load
+            }
+            if (!img.hasAttribute('data-srcset') && img.srcset) {
+                img.setAttribute('data-srcset', img.srcset);  // Move srcset to data-srcset
+                img.removeAttribute('srcset');  // Remove srcset to prevent immediate load
+            }
+        });
+
+        // Loop through all videos
+        allVideos.forEach(video => {
+            if (!video.classList.contains('lazy')) {
+                video.classList.add('lazy');
+            }
+            video.querySelectorAll('source').forEach(source => {
+                if (!source.hasAttribute('data-src')) {
+                    source.setAttribute('data-src', source.src);  // Move current src to data-src
+                    source.removeAttribute('src');  // Remove src attribute to prevent immediate load
+                }
+            });
+        });
+    }
+
+    // Lazy load observer for images and videos
+    function lazyLoadMedia() {
+        const lazyElements = document.querySelectorAll('img.lazy, video.lazy');
+
+        if ('IntersectionObserver' in window) {
+            let lazyObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        let element = entry.target;
+
+                        // Lazy load for images
+                        if (element.tagName === 'IMG') {
+                            element.src = element.dataset.src;
+                            element.srcset = element.dataset.srcset || '';  // Optional if srcset exists
+                            element.classList.remove('lazy');
+                        }
+
+                        // Lazy load for videos
+                        if (element.tagName === 'VIDEO') {
+                            element.querySelectorAll('source').forEach(source => {
+                                source.src = source.dataset.src;
+                            });
+                            element.load();  // Load the video
+                            element.classList.remove('lazy');
+                        }
+
+                        observer.unobserve(element);  // Stop observing after loading
+                    }
+                });
+            });
+
+            // Observe each lazy element
+            lazyElements.forEach(element => lazyObserver.observe(element));
+        } else {
+            // Fallback for browsers without IntersectionObserver support
+            lazyElements.forEach(element => {
+                if (element.tagName === 'IMG') {
+                    element.src = element.dataset.src;
+                    element.srcset = element.dataset.srcset || '';
+                }
+                if (element.tagName === 'VIDEO') {
+                    element.querySelectorAll('source').forEach(source => {
+                        source.src = source.dataset.src;
+                    });
+                    element.load();
+                }
+            });
+        }
+    }
+
+    // First, set lazy loading attributes for all media if not already set
+    setLazyLoadingForMedia();
+
+    // Then, implement lazy loading behavior using IntersectionObserver
+    lazyLoadMedia();
+
+});
+
+
 
 
 
