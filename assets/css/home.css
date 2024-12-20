@@ -835,7 +835,7 @@ swiper-container {
 /* Winston-Churchill quote */
 .win-quote-section {
     height: 80vh;
-    background-image: url('../img/winston.png');
+    background-image: url(' https://craftdhabitat.com/img/winston.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -850,7 +850,7 @@ swiper-container {
 
 @media (max-width: 768px) {
     .win-quote-section{
-        background-image: url('../img/winstonsmall.png');
+        background-image: url(' https://craftdhabitat.com/img/winstonsmall.png');
         background-size: cover;
     }
 }
@@ -1377,6 +1377,50 @@ font-size: 1.4rem;
     min-height: 0;
 }
 
+
+.profile-section {
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    /* background-color: #e6e6f5; */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    
+}
+
+.profile-text {
+    flex: 2;
+    /* color: #333; */
+    padding-right: 20px;
+    max-width: 500px;
+}
+
+.profile-text h1 {
+    font-size: 1.5rem;
+    
+    /* color: #444; */
+}
+
+.profile-text p {
+    /* font-size: 1rem; */
+    line-height: 1.6;
+    margin: 0;
+}
+
+.profile-image {
+    flex: 1;
+    text-align: center;
+}
+
+.profile-image img {
+    
+   max-width: 300px;
+    height: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .mission,#our-difference,#our-values {
    margin-top: 100px;
    margin-bottom: 50px;
@@ -1491,7 +1535,7 @@ font-size: 1.4rem;
         left: 0;
         right: 0;
         bottom: 0;
-        background-image: url('../../assets/img/clock_tower.png');
+        background-image: url(' https://craftdhabitat.com/assets/img/clock_tower.png');
         background-size: cover;
         background-position: center;
         opacity: 0.1;

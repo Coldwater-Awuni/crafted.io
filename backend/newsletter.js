@@ -5,7 +5,7 @@ window.onload = function() {
 function loadPopup() {
     console.log("Loading popup..."); // Debug log
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', '../../pages/newsteller.html', true);
+    xhr.open('GET', ' https://craftdhabitat.com/pages/newsteller.html', true);
     
     xhr.onreadystatechange = function() {
         console.log("XHR state: " + xhr.readyState + ", status: " + xhr.status); // Debug log
