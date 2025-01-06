@@ -1,5 +1,4 @@
-
-  /* #80534d 
+/* #80534d 
     #77847b
     #9d9087
     #bfb0ab
@@ -1382,31 +1381,33 @@ font-size: 1.4rem;
     margin: 20px auto;
     display: flex;
     align-items: center;
-    /* background-color: #e6e6f5; */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-width: 1000px;
-    
+    gap: 30px;
 }
 
 .profile-text {
     flex: 2;
-    /* color: #333; */
     padding-right: 20px;
     max-width: 500px;
 }
 
 .profile-text h1 {
     font-size: 1.5rem;
-    
-    /* color: #444; */
+    margin-bottom: 10px;
+}
+
+.profile-text h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #666;
 }
 
 .profile-text p {
-    /* font-size: 1rem; */
     line-height: 1.6;
-    margin: 0;
+    margin-bottom: 15px;
 }
 
 .profile-image {
@@ -1415,10 +1416,56 @@ font-size: 1.4rem;
 }
 
 .profile-image img {
-    
-   max-width: 300px;
+    max-width: 300px;
+    width: 100%;
     height: auto;
+    border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 900px) {
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .profile-text {
+        padding-right: 0;
+        max-width: 100%;
+    }
+
+    .profile-image {
+        order: -1;
+        margin-bottom: 20px;
+    }
+
+    .profile-image img {
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-section {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .profile-text h1 {
+        font-size: 1.3rem;
+    }
+
+    .profile-text h3 {
+        font-size: 1.1rem;
+    }
+
+    .profile-text p {
+        font-size: 1rem;
+    }
+
+    .profile-image img {
+        max-width: 200px;
+    }
 }
 
 .mission,#our-difference,#our-values {
