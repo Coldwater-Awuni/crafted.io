@@ -613,11 +613,8 @@ swiper-container {
 }
   .our-service {
     position: relative;
-    /* max-width: 1200px; */
     width: 100%;
-    /* height: 80vh; */
     background-color: darkgray;
-  
 }
 .service-carousel{
    width: 95%;
@@ -650,22 +647,18 @@ swiper-container {
 }
 .service-grid-item {
     width: calc(33.33% - 20px);
-    /* margin-bottom: 30px; */
-    margin: 0px auto;
-    /* margin: 20px; */
+    margin: 10px;
     background-color: whitesmoke;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    
+    transition: transform 0.3s ease;
 }
 .service-grid-item:hover{
-    cursor: pointer;
-    scale: 101%;
+    transform: scale(1.05);
 }
 .grid-img {
     height: 300px;
     background-size: cover;
     background-position: center;
-    transition: all o.5 ease-in-out;
 }
 
 .grid-txt {
@@ -680,9 +673,6 @@ swiper-container {
     color: #666;
 }
 .grid-btn {
-    margin: auto 10px;
-    
-    bottom: 3px;
     text-align: center;
     padding-bottom: 15px;
 }
@@ -709,13 +699,18 @@ swiper-container {
         }
     }
 
-
+@media (max-width: 1080px) {
+    .service-grid-item {
+        width: calc(50% - 20px);
+    }
+}
 
 @media (max-width: 768px) {
     .service-grid-item {
-        width: 90%;
+        width: calc(100% - 20px);
     }
 }
+
 /* Our Difference */
 .our-difference {
   position: relative;
@@ -1381,33 +1376,31 @@ font-size: 1.4rem;
     margin: 20px auto;
     display: flex;
     align-items: center;
+    /* background-color: #e6e6f5; */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-width: 1000px;
-    gap: 30px;
+    
 }
 
 .profile-text {
     flex: 2;
+    /* color: #333; */
     padding-right: 20px;
     max-width: 500px;
 }
 
 .profile-text h1 {
     font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.profile-text h3 {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    color: #666;
+    
+    /* color: #444; */
 }
 
 .profile-text p {
+    /* font-size: 1rem; */
     line-height: 1.6;
-    margin-bottom: 15px;
+    margin: 0;
 }
 
 .profile-image {
@@ -1416,56 +1409,10 @@ font-size: 1.4rem;
 }
 
 .profile-image img {
-    max-width: 300px;
-    width: 100%;
+    
+   max-width: 300px;
     height: auto;
-    border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-@media (max-width: 900px) {
-    .profile-section {
-        flex-direction: column;
-        text-align: center;
-        padding: 15px;
-    }
-
-    .profile-text {
-        padding-right: 0;
-        max-width: 100%;
-    }
-
-    .profile-image {
-        order: -1;
-        margin-bottom: 20px;
-    }
-
-    .profile-image img {
-        max-width: 250px;
-    }
-}
-
-@media (max-width: 480px) {
-    .profile-section {
-        padding: 10px;
-        margin: 10px;
-    }
-
-    .profile-text h1 {
-        font-size: 1.3rem;
-    }
-
-    .profile-text h3 {
-        font-size: 1.1rem;
-    }
-
-    .profile-text p {
-        font-size: 1rem;
-    }
-
-    .profile-image img {
-        max-width: 200px;
-    }
 }
 
 .mission,#our-difference,#our-values {
@@ -1874,6 +1821,64 @@ z-index:1;
 
 
 
+
+        /* .whatsapp-telegram-links {
+            position: fixed;
+            bottom: 40%;
+            right: 0px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .whatsapp-link, .telegram-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 30px;
+            color: white;
+            text-decoration: none;
+            transition: width 0.3s ease, ;
+            overflow: hidden;
+            border-radius: 0; 
+        }
+        
+        .whatsapp-link i, .telegram-link i {
+            font-size: 20px;
+        }
+        
+        .whatsapp-span, .telegram-span {
+            display: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+        
+        .whatsapp-link {
+            background-color: #25D366;
+        }
+        
+        .telegram-link {
+            background-color: #0088cc; 
+        }
+        
+        /* .whatsapp-link:hover {
+            width: 120px;
+            padding-left: 10px;
+        }
+        
+        .telegram-link:hover {
+            width: 120px;
+            padding-left: 10px;
+        } */
+        
+        .whatsapp-link:hover .whatsapp-span {
+            display: inline-block;
+        }
+        
+        .telegram-link:hover .telegram-span {
+            display: inline-block;
+        } */
 
 .gallery-item {
     position: relative;
@@ -2636,6 +2641,12 @@ grid-column-start:6;grid-column-end:17
     }
     .img-4
     {
+        padding:0 17.5px
+    }
+    @media only screen and (min-width:600px)
+    {
+        .img-4
+        {
         padding:0 17.5px
     }
     @media only screen and (min-width:600px)
