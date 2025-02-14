@@ -35,25 +35,7 @@
     background-color: #25D366; /* WhatsApp green */
 }
 
-.telegram-link {
-    background-color: #0088cc; /* Telegram blue */
-}
 
-.facebook-link {
-    background-color: #3b5998; /* Facebook blue */
-}
-
-.instagram-link {
-    background-color: #E1306C; /* Instagram pink */
-}
-
-.twitter-link {
-    background-color: #1DA1F2; /* Twitter blue */
-}
-
-.linkedin-link {
-    background-color: #0077B5; /* LinkedIn blue */
-}
 .social-link:hover .social-span {
     display: inline-block;
 }
