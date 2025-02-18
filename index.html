@@ -57,61 +57,25 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 z-index: 1000;
-                width: 500px;
-                max-width: 90vw;
-                background: white;
+                width: 40%;
+                
+                
                 border-radius: 12px;
                 box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-                overflow: visible; /* Changed from hidden to prevent collapse */
+               
                 padding-top: 40px; /* Make room for close button */
-                display: block; /* Ensure it stays visible */
+               /* Ensure it stays visible */
             }
 
             #popup-container.hidden {
                 display: none;
             }
 
-            #popup-close {
-                position: absolute;
-                top: -15px;
-                right: -15px;
-                width: 30px;
-                height: 30px;
-                background: white;
-                border: none;
-                border-radius: 50%;
-                cursor: pointer;
-                font-size: 20px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-                z-index: 1001;
-            }
+            
 
-            #popup-close:hover {
-                background: #f5f5f5;
-            }
+           
     
-            /* Style for OpinionStage widget container */
-            .os_widget {
-                width: 100% !important;
-                height: 500px !important;
-                border: none;
-                margin: 0;
-                padding: 0;
-                display: block !important; /* Force display */
-            }
-    
-            @media (max-width: 768px) {
-                #popup-container {
-                    width: 90%;
-                    max-height: 80vh;
-                }
-                .os_widget {
-                    height: 400px !important;
-                }
-            }
+         
         </style>
     </head>
    
@@ -283,25 +247,9 @@
             </div>
             -->
    
-    <!-- Newsletter Popup Overlay -->
-        <div id="popup-container">
-            <button id="popup-close">&times;</button>
-            <div class="widget-wrapper">
-                <script type="text/javascript">
-                (function(d,s,id,u){
-                  if (d.getElementById(id)) return;
-                  var js, sjs = d.getElementsByTagName(s)[0],
-                      t = Math.floor(new Date().getTime() / 1000000);
-                  js=d.createElement(s); js.id=id; js.async=1; js.src=u+'?'+t;
-                  sjs.parentNode.insertBefore(js, sjs);
-                }(document, 'script', 'os-widget-jssdk', 'https://www.opinionstage.com/assets/loader.js'));
-                </script>
-                <div id="os-widget-1331676" class="os_widget" 
-                     data-path="/craft-d-habitat/0c206da3-30f8-4b57-953e-ed3060ec234a" 
-                     data-of="craft-d-habitat" 
-                     data-opinionstage-widget="0c206da3-30f8-4b57-953e-ed3060ec234a">
-                </div>
-            </div>
+    <!-- quiz Popup Overlay -->
+        <div id="popup-container" class="popup-container">
+            
         </div>
 
       
